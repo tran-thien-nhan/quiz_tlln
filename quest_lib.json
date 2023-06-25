@@ -1,135 +1,75 @@
 {
     "questions": [
       {
-        "question": "Giá trị xã hội là gì?",
+        "question": "Công việc quan trọng hàng đầu trong đời là gì?",
         "choices": [
-          "Giá trị xã hội là một thuật ngữ đề cập đến giá trị và vai trò của mỗi cá nhân trong xã hội.",
-          "Giá trị xã hội là những nguyên tắc, niềm tin và quy tắc được chấp nhận và chia sẻ bởi cộng đồng.",
-          "Giá trị xã hội là những tiêu chuẩn và tiêu chí mà xã hội đề ra để đánh giá và định hình hành vi của mỗi người.",
-          "Giá trị xã hội là những mục tiêu và lý tưởng mà xã hội mong muốn đạt được và gìn giữ trong quá trình phát triển."
+          "Nhận diện và phân biệt được những vấn đề",
+          "Kiểm soát yếu tố ngoại cảnh",
+          "Quyết định cho chính mình",
+          "Thay đổi tương lai"
         ],
-        "correctAnswer": "Giá trị xã hội là một thuật ngữ đề cập đến giá trị và vai trò của mỗi cá nhân trong xã hội."
+        "correctAnswer": "Nhận diện và phân biệt được những vấn đề"
       },
       {
-        "question": "Tại sao giá trị xã hội quan trọng?",
+        "question": "Theo Epictetus, nhận diện tốt xấu là để nhận diện điều gì?",
         "choices": [
-          "Giá trị xã hội quan trọng vì nó giúp xác định hành vi và hướng dẫn con người trong xã hội.",
-          "Giá trị xã hội đóng vai trò quan trọng trong việc định hình quan hệ và tương tác giữa các thành viên trong xã hội.",
-          "Giá trị xã hội cung cấp một thước đo để đánh giá đúng sai và tạo ra sự công bằng và sự cân nhắc trong xã hội.",
-          "Giá trị xã hội đóng vai trò quan trọng trong việc duy trì trật tự và sự ổn định trong xã hội."
+          "Nhận diện tốt xấu của người khác",
+          "Nhận diện tốt xấu của yếu tố ngoại cảnh",
+          "Nhận diện tốt xấu cho quyết định của chính mình",
+          "Nhận diện tốt xấu của tương lai"
         ],
-        "correctAnswer": "Giá trị xã hội đóng vai trò quan trọng trong việc định hình quan hệ và tương tác giữa các thành viên trong xã hội."
+        "correctAnswer": "Nhận diện tốt xấu cho quyết định của chính mình"
       },
       {
-        "question": "Ai xác định giá trị xã hội?",
+        "question": "Công việc quan trọng nhất trong việc thực hành Chủ nghĩa Khắc kỷ là gì?",
         "choices": [
-          "Giá trị xã hội được hình thành và xác định bởi tập quán, văn hóa, giáo dục và các yếu tố xã hội khác.",
-          "Giá trị xã hội phản ánh sự tương tác và sự thống nhất của các thành viên trong xã hội.",
-          "Giá trị xã hội được xác định thông qua quá trình định hình và thay đổi của xã hội theo thời gian.",
-          "Giá trị xã hội được tạo ra từ sự thỏa thuận và sự đồng thuận của các thành viên trong xã hội."
+          "Phân biệt những thứ không thể thay đổi và những thứ có thể thay đổi",
+          "Chỉ phân biệt những thứ có thể thay đổi",
+          "Kiểm soát những thứ nằm ngoài tầm kiểm soát",
+          "Thay đổi tương lai"
         ],
-        "correctAnswer": "Giá trị xã hội được hình thành và xác định bởi tập quán, văn hóa, giáo dục và các yếu tố xã hội khác."
+        "correctAnswer": "Phân biệt những thứ không thể thay đổi và những thứ có thể thay đổi"
       },
       {
-        "question": "Ai là nhóm dân số chung (50%) được đề cập trong đoạn văn?",
+        "question": "Điều gì là không thể thay đổi và không thể kiểm soát?",
         "choices": [
-          "Những người mà tác giả không để ý và đi qua trên phố mà không chú ý gì tới",
-          "Những người đang đọc cuốn này",
-          "Những người tập trung vào hôn nhân, con cái và tài sản thế chấp",
-          "Những người theo dõi gái đẹp trên mạng xã hội"
+          "Thời tiết, chiều cao",
+          "Quốc gia sinh ra, sự thích hợp của người khác",
+          "Điều kiện gia đình, tuổi tác",
+          "cả 3 điều trên"
         ],
-        "correctAnswer": "Những người mà tác giả không để ý và đi qua trên phố mà không chú ý gì tới"
+        "correctAnswer": "cả 3 điều trên"
       },
       {
-        "question": "Ước mơ chung của nhóm dân số chung (50%) là gì?",
+        "question": "Lời nguyện An tĩnh được nhắm đến việc gì?",
         "choices": [
-          "Tìm kiếm sự hài lòng và hạnh phúc trong việc tạo dựng gia đình và sở hữu tài sản",
-          "Tìm kiếm người đối tác duy nhất và tập trung vào việc được ai đó mong muốn",
-          "Tôn thờ người nổi tiếng và trai đẹp",
-          "Nuôi sống những người uốn éo trên OnlyFans"
+          "Nhận diện được những điều không thể thay đổi",
+          "Nhận diện được những điều có thể thay đổi",
+          "Nhận diện được hai điều trên",
+          "Nhận diện được tương lai"
         ],
-        "correctAnswer": "Tìm kiếm người đối tác duy nhất và tập trung vào việc được ai đó mong muốn"
+        "correctAnswer": "Nhận diện được hai điều trên"
       },
       {
-        "question": "Đặc điểm chung của đàn ông trong nhóm dân số chung (50%)?",
+        "question": "Người nghiện ngập ở hiện tại có thể thay đổi được điều gì?",
         "choices": [
-          "Không có hoài bão và hài lòng với việc ngồi ghế phụ trong đời",
-          "Quan tâm tới sức khỏe và coi đàn bà như con người với nhau",
-          "Tôn thờ gái đẹp và theo dõi họ trên mạng xã hội",
-          "Nuôi sống những người uốn éo trên OnlyFans"
+          "Quá khứ, lựa chọn của mình",
+          "Qúa khứ, tương lai",
+          "Tương lai, sức mạnh hiện tại",
+          "Quá khứ, hiện tại"
         ],
-        "correctAnswer": "Không có hoài bão và hài lòng với việc ngồi ghế phụ trong đời"
+        "correctAnswer": "Tương lai, sức mạnh hiện tại"
       },
       {
-        "question": "Người đàn ông đẹp trai thường được đánh giá như thế nào trong xã hội?",
+        "question": "Điều gì sẽ xảy ra nếu chúng ta tập trung vào việc xác định những thứ nằm trong và ngoài tầm kiểm soát của bản thân?",
         "choices": [
-          "Được coi là ở cực cao trên tháp xã hội và có khả năng hấp dẫn mọi người",
-          "Nằm ở bậc thấp trong xã hội và không được đánh giá cao",
-          "Có khả năng hốt được bất kỳ em ghệ nào họ muốn",
-          "Đánh giá sắc đẹp của đàn bà một cách khách quan"
+          "Chúng ta sẽ trở nên hạnh phúc hơn",
+          "Chúng ta sẽ có lợi thế hơn so với những người đấu tranh trong vô vọng",
+          "Chúng ta sẽ đấu tranh trong vô vọng",
+          "Chúng ta sẽ tìm ra sự thay đổi"
         ],
-        "correctAnswer": "Nằm ở bậc thấp trong xã hội và không được đánh giá cao"
-      },
-      {
-        "question": "Đàn bà đánh giá sắc đẹp của đàn ông dựa trên điều gì?",
-        "choices": [
-          "Cảm xúc và chủ quan",
-          "Khách quan và khách quan",
-          "Tài năng và tình cảm",
-          "Hấp dẫn và quyến rũ"
-        ],
-        "correctAnswer": "Cảm xúc và chủ quan"
-      },
-      {
-        "question": "Theo nghiên cứu trên trang web hẹn hò OkCupid, đánh giá của hai giới tính như thế nào khi chỉ mới gặp mặt nhau?",
-        "choices": [
-          "Trai được đánh giá bằng tài năng, gái được đánh giá bằng sắc đẹp",
-          "Trai được đánh giá bằng sắc đẹp, gái được đánh giá bằng tài năng",
-          "Cả hai giới tính đều được đánh giá bằng sắc đẹp",
-          "Cả hai giới tính đều được đánh giá bằng tài năng"
-        ],
-        "correctAnswer": "Trai được đánh giá bằng tài năng, gái được đánh giá bằng sắc đẹp"
-      },
-      {
-        "question": "Đàn ông đẹp trai có thể ngủ với gái dưới 5 điểm một cách dễ dàng?",
-        "choices": [
-          "Có thể",
-          "Không thể",
-          "Tùy vào tình huống",
-          "Không biết"
-        ],
-        "correctAnswer": "Có thể"
-      },
-      {
-        "question": "Gã đàn ông đẹp trai sẽ trên cơ bất kỳ thằng đồng cấp 5 điểm hoặc thấp hơn?",
-        "choices": [
-          "Đúng",
-          "Sai",
-          "Phụ thuộc vào ngữ cảnh",
-          "Không biết"
-        ],
-        "correctAnswer": "Đúng"
-      },
-      {
-        "question": "Phần lớn đàn ông đẹp trai đều không biết những chuyện đang xảy ra bên ngoài thế giới nhỏ bé của họ đâu?",
-        "choices": [
-          "Đúng",
-          "Sai",
-          "Phụ thuộc vào ngữ cảnh",
-          "Không biết"
-        ],
-        "correctAnswer": "Đúng"
-      },
-      {
-        "question": "Đàn ông đẹp trai hiếm khi thành công vì lí do gì?",
-        "choices": [
-          "Quá vấn vương với việc dí theo mấy em 6-7 điểm mỗi ngày",
-          "Chỉ tập trung vào cuộc sống và bản thân",
-          "Bị cười nhạo bởi những thằng đang ngồi ở trên",
-          "Không biết"
-        ],
-        "correctAnswer": "Quá vấn vương với việc dí theo mấy em 6-7 điểm mỗi ngày"
-      }
+        "correctAnswer": "Chúng ta sẽ có lợi thế hơn so với những người đấu tranh trong vô vọng"
+      }      
     ]
   }
   
