@@ -65,38 +65,16 @@
                 const nextButton = document.getElementById("nextButton");
                 const scoreElement = document.getElementById("score");
 
-                // Xáo trộn câu trả lời
-                function shuffleAnswers(answers) {
-                    for (let i = answers.length - 1; i > 0; i--) {
-                        const j = Math.floor(Math.random() * (i + 1));
-                        [answers[i], answers[j]] = [answers[j], answers[i]];
-                    }
-                    return answers;
-                }
-
                 // Cập nhật câu hỏi và câu trả lời
                 function updateQuestion() {
-                    const shuffledQuestions = shuffleQuestions(questions);
-                    const question = shuffledQuestions[currentQuestionIndex];
-                    const shuffledAnswers = shuffleAnswers(question.choices);
-
+                    const question = questions[currentQuestionIndex];
                     questionElement.textContent = question.question;
                     resultElement.textContent = "";
 
                     for (let i = 0; i < answerTextElements.length; i++) {
-                        answerTextElements[i].textContent = shuffledAnswers[i];
+                        answerTextElements[i].textContent = question.choices[i];
                     }
                 }
-
-                // Xáo trộn mảng câu hỏi
-                function shuffleQuestions(questions) {
-                    for (let i = questions.length - 1; i > 0; i--) {
-                        const j = Math.floor(Math.random() * (i + 1));
-                        [questions[i], questions[j]] = [questions[j], questions[i]];
-                    }
-                    return questions;
-                }
-
 
                 // Kiểm tra câu trả lời
                 function checkAnswer() {
@@ -131,6 +109,8 @@
                                 const finalScore = (score / questions.length) * 10;
                                 scoreElement.textContent = `Tổng điểm: ${finalScore.toFixed(1)}`;
                                 scoreElement.style.display = "block";
+                                scoreElement.style.fontWeight = "bold";
+                                scoreElement.style.color = "red";
                             }
                         }, 200);
                     }
