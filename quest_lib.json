@@ -229,6 +229,56 @@
           "Buồn bã và cảm thấy vô vọng"
         ],
         "correctAnswer": "Chấp nhận quá khứ và tập trung vào tương lai"
+      },
+      {
+        "question": "Theo ý kiến của Seneca, điều gì là nguyên nhân khiến con người trở nên điên dại?",
+        "choices": [
+          "Quan điểm sai lệch về những thứ mà họ hướng tới",
+          "Sự việc mà họ muốn đạt được",
+          "Không có kế hoạch từ đầu đến cuối",
+          "Tâm trạng chán nản"
+        ],
+        "correctAnswer": "Quan điểm sai lệch về những thứ mà họ hướng tới"
+      },
+      {
+        "question": "Theo Robert Greene, việc lập kế hoạch từ đầu đến cuối có tác dụng gì?",
+        "choices": [
+          "Tránh choáng ngợp bởi hoàn cảnh",
+          "Đạt được kết quả tốt nhất",
+          "Đảm bảo sự thành công",
+          "Hạn chế thất bại"
+        ],
+        "correctAnswer": "Tránh choáng ngợp bởi hoàn cảnh"
+      },
+      {
+        "question": "Thói quen thứ hai trong 7 Thói quen của người thành đạt là gì?",
+        "choices": [
+          "Bắt đầu với một cái kết trong tâm trí",
+          "Lập kế hoạch chi tiết từ đầu đến cuối",
+          "Hình dung ra cái kết trong đầu",
+          "Đặt mục tiêu cụ thể"
+        ],
+        "correctAnswer": "Bắt đầu với một cái kết trong tâm trí"
+      },
+      {
+        "question": "Theo nhà Khắc kỷ, sự lạc lối và hỗn loạn trong hành vi xảy ra khi?",
+        "choices": [
+          "Không có những nỗ lực hướng vào nguyên nhân và mục đích",
+          "Quá tập trung vào kế hoạch từ đầu đến cuối",
+          "Chịu trách nhiệm với những xao nhãng trong tâm hồn",
+          "Không biết khi nào nói có và khi nào nói không"
+        ],
+        "correctAnswer": "Không có những nỗ lực hướng vào nguyên nhân và mục đích"
+      },
+      {
+        "question": "khi mất đi sự định nghĩa, con người có thể bị lạc lối vào phương hướng nào?",
+        "choices": [
+          "Phương hướng vô định",
+          "Phương hướng cụ thể",
+          "Phương hướng chính xác",
+          "Phương hướng sáng suốt"
+        ],
+        "correctAnswer": "Phương hướng vô định"
       }     
     ]
   }
