@@ -50,6 +50,9 @@
             .then(data => {
                 const questions = data.questions;
 
+                // Lấy ngẫu nhiên 10 câu hỏi
+                const randomQuestions = getRandomElements(questions, 10);
+
                 let currentQuestionIndex = 0;
                 let score = 0;
 
@@ -67,7 +70,7 @@
 
                 // Cập nhật câu hỏi và câu trả lời
                 function updateQuestion() {
-                    const question = questions[currentQuestionIndex];
+                    const question = randomQuestions[currentQuestionIndex];
                     questionElement.textContent = question.question;
                     resultElement.textContent = "";
 
@@ -78,7 +81,7 @@
 
                 // Kiểm tra câu trả lời
                 function checkAnswer() {
-                    const question = questions[currentQuestionIndex];
+                    const question = randomQuestions[currentQuestionIndex];
                     const selectedAnswer = document.querySelector('input[name="answer"]:checked');
 
                     if (selectedAnswer) {
@@ -96,7 +99,7 @@
                         setTimeout(() => {
                             currentQuestionIndex++;
 
-                            if (currentQuestionIndex < questions.length) {
+                            if (currentQuestionIndex < randomQuestions.length) {
                                 updateQuestion();
                                 selectedAnswer.checked = false;
                                 nextButton.disabled = true;
@@ -106,7 +109,7 @@
                             } else {
                                 questionContainer.style.display = "none";
                                 nextButton.style.display = "none";
-                                const finalScore = (score / questions.length) * 10;
+                                const finalScore = (score / randomQuestions.length) * 10;
                                 scoreElement.textContent = `Tổng điểm: ${finalScore.toFixed(1)}`;
                                 scoreElement.style.display = "block";
                                 scoreElement.style.fontWeight = "bold";
@@ -127,6 +130,13 @@
             .catch(error => {
                 console.error("Error:", error);
             });
+
+        // Hàm lấy ngẫu nhiên các phần tử từ một mảng
+        function getRandomElements(array, numElements) {
+            const shuffledArray = array.sort(() => Math.random() - 0.5);
+            return shuffledArray.slice(0, numElements);
+        }
+
     </script>
 </body>
 
