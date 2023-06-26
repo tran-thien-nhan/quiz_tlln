@@ -2,8 +2,28 @@
     "items": [
         {
             "link": "https://www.youtube.com/watch?v=7H9XgNfx0h0&t=120s",
-            "image_link": "img/youtube_logo.jpg",
-            "title": "THE BODYFAT BREAKTHROUGH || DR.ELLINGTON DARDEN"
+            "image_link": "https://i.ytimg.com/vi/7H9XgNfx0h0/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBVQD6_YDRd6aYHCPVP_deAxEgwTw",
+            "title": "bẻ khóa giảm mỡ của ts. Ellington Darden"
+        },
+        {
+            "link": "https://www.youtube.com/watch?v=doupx8SAs5Y&t=467s&pp=ygUIaHViZXJtYW4%3D",
+            "image_link": "https://i.ytimg.com/vi/doupx8SAs5Y/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBNmod_q8InnVeJnd4WRPDZxzmMAA",
+            "title": "Huberman podcast: cách học tốt hơn và tạo ra tương lai tốt nhất"
+        },
+        {
+            "link": "https://www.youtube.com/watch?v=do2xm4f9YlM&pp=ygUIaHViZXJtYW4%3D",
+            "image_link": "https://i.ytimg.com/vi/do2xm4f9YlM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDSZpeC5e56Yh9DHVAdQLLOeqIp6w",
+            "title": "5 cách tăng TEST của Huberman"
+        },
+        {
+            "link": "https://www.youtube.com/watch?v=ZgcYPmhYEuc",
+            "image_link": "https://i.ytimg.com/vi/ZgcYPmhYEuc/hq720.jpg?sqp=-oaymwEcCNAFEJQDSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLD6otOlVICAw09WpSJ4ZTVb1jYPTQ",
+            "title": "4 món ăn làm giảm TEST"
+        },
+        {
+            "link": "https://www.youtube.com/watch?v=xxzjDAPBIOc&pp=ygUMZHIuZXJpYyBiZXJn",
+            "image_link": "https://i.ytimg.com/vi/xxzjDAPBIOc/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBF9slZLj4M1KuM8P_lUP5TprAiTA",
+            "title": "thứ duy nhất cản trở giảm mỡ, không phải carb hay đường"
         }
     ]
 }
