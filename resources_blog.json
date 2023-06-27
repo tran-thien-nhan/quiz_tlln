@@ -24,6 +24,11 @@
             "link": "kho_clips.html",
             "image_link": "img/youtube_logo.jpg",
             "title": "TÀI NGUYÊN CLIPS"
+        },
+        {
+            "link": "summary.html",
+            "image_link": "https://i.ex-cdn.com/mgn.vn/files/content/2021/06/25/pp5-1724.jpg",
+            "title": "TÓM TẮT CÁC NỘI DUNG"
         }
     ]
 }
