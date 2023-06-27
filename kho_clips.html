@@ -63,13 +63,35 @@
         </nav>
         <!-- end phần menu -->
 
-        <!-- phần tìm kiếm bài viết -->
-        <input class="mt-2" style="align-items: center;" type="text" id="searchInput"
-            placeholder="Tìm kiếm tên bài viết...">
-        <!-- end phần tìm kiếm bài viết -->
+        <div style="display: flex;">
+            <!-- phần tìm kiếm sách -->
+            <input class="mt-2" style="align-items: center;" type="text" id="searchInput"
+                placeholder="Tìm kiếm tên sách...">
+            <!-- end phần tìm kiếm sách -->
+
+            <!-- phần lọc type -->
+            <div class="dropdown" style="margin-left: 2rem; margin-top: 0.5rem;">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Thể loại
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#" data-type="thể loại">Tất cả</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="sức khỏe">sức khỏe</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="tăng cơ">tăng cơ</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="giảm mỡ">giảm mỡ</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="biohack">biohack</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="học tập">học tập</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="cuộc sống">cuộc sống</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="gym">gym</a></li>
+                </ul>
+            </div>
+
+            <!-- end phần lọc type -->
+        </div>
 
         <div class="row mt-2" id="content">
-            <!-- Đây là nơi sẽ chứa các bài viết -->
+            <!-- Đây là nơi sẽ chứa các sách -->
         </div>
     </div>
     <br>
@@ -106,11 +128,16 @@
                         h5Element.className = 'title';
                         h5Element.textContent = item.title;
 
+                        const typeElement = document.createElement('h5');
+                        typeElement.className = 'type';
+                        typeElement.textContent = item.type;
+
                         // Gắn các phần tử vào DOM
                         thumbnailContainerElement.appendChild(imgElement);
                         thumbnailContainerElement.appendChild(h5Element);
                         aElement.appendChild(thumbnailContainerElement);
                         divElement.appendChild(aElement);
+                        thumbnailContainerElement.appendChild(typeElement);
                         contentElement.appendChild(divElement);
                     });
                 })
@@ -140,6 +167,31 @@
                     }
                 }
             }
+
+            // Lấy các phần tử cần sử dụng
+            var choices = document.getElementsByClassName("dropdown-item");
+
+            // Xử lý sự kiện khi chọn một thể loại sách trong dropdown menu
+            for (var i = 0; i < choices.length; i++) {
+                choices[i].addEventListener("click", function (event) {
+                    var selectedType = event.target.getAttribute("data-type");
+                    filterBooksByType(selectedType);
+                });
+            }
+
+            // Hàm thực hiện lọc sách dựa trên thể loại
+            function filterBooksByType(selectedType) {
+                for (var i = 0; i < thumbnailContainers.length; i++) {
+                    var typeElement = thumbnailContainers[i].querySelector(".type");
+                    var type = typeElement.textContent.toLowerCase();
+                    if (type === selectedType || selectedType === "thể loại") {
+                        thumbnailContainers[i].style.display = "block";
+                    } else {
+                        thumbnailContainers[i].style.display = "none";
+                    }
+                }
+            }
+
         });
     </script>
 
