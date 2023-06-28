@@ -1,0 +1,24 @@
+{
+    "items": [
+        {
+            "link": "book.html",
+            "image_link": "https://about.proquest.com/globalassets/proquest/media/images/decrotive/oldbooks.jpg",
+            "title": "SÁCH - KHO TÀNG TRI THỨC"
+        },
+        {
+            "link": "kho_clips.html",
+            "image_link": "https://wiki-travel.com.vn/Uploads/picture/thanhnha-155021115033-2-duong-ham-tinh-yeu.jpg",
+            "title": "TÀI NGUYÊN CLIPS VÀ SÁCH"
+        },
+        {
+            "link": "summary.html",
+            "image_link": "https://i.ex-cdn.com/mgn.vn/files/content/2021/06/25/pp5-1724.jpg",
+            "title": "TÓM TẮT CÁC NỘI DUNG"
+        },
+        {
+            "link": "blog.html",
+            "image_link": "img/the_matrix_all.webp",
+            "title": "BLOG - CÁC BÀI VIẾT HAY"
+        }
+    ]
+}

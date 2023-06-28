@@ -1,19 +1,14 @@
 {
     "items": [
         {
-            "link": "nhap_code_book.html",
+            "link": "book.html",
             "image_link": "https://about.proquest.com/globalassets/proquest/media/images/decrotive/oldbooks.jpg",
             "title": "SÁCH - KHO TÀNG TRI THỨC"
         },
         {
-            "link": "health.html",
-            "image_link": "https://images2.thanhnien.vn/uploaded/ngocquy/2016_07_19/1-tap-gym-shutterstock_HCSN.jpg?width=500",
-            "title": "HEALTH - GYM"
-        },
-        {
             "link": "kho_clips.html",
-            "image_link": "img/youtube_logo.jpg",
-            "title": "TÀI NGUYÊN CLIPS"
+            "image_link": "https://wiki-travel.com.vn/Uploads/picture/thanhnha-155021115033-2-duong-ham-tinh-yeu.jpg",
+            "title": "TÀI NGUYÊN CLIPS VÀ SÁCH"
         },
         {
             "link": "summary.html",
