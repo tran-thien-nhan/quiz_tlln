@@ -1,0 +1,22 @@
+{
+    "items": [
+        {
+            "google_drive_link": "https://docs.google.com/document/d/1RPN-BU23mwmHb9AXnYhgOgWAVefog4oQ-pl6X0VnIqs/edit?usp=sharing",
+            "type":"bài viết",
+            "image_link": "img/triz/chia_nho.jfif",
+            "title": "1. nguyên tắc chia nhỏ"
+        },
+        {
+            "google_drive_link": "https://drive.google.com/file/d/1MicGm6BYItGJi3qweUf0rqu8Pge_mTcx/view?usp=drive_link",
+            "type":"sách",
+            "image_link": "img/triz_logo.png",
+            "title": "phương pháp luận sáng tạo và đổi mới tập 1"
+        },
+        {
+            "google_drive_link": "https://drive.google.com/file/d/1O9jFmHvpKLDQcq7YO95bywoCXq8VDKa5/view?usp=drive_link",
+            "type":"sách",
+            "image_link": "img/triz_logo.png",
+            "title": "phương pháp luận sáng tạo và đổi mới tập 2"
+        }
+    ]
+}

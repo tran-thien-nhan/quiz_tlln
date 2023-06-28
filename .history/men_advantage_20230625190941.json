@@ -1,0 +1,14 @@
+{
+    "questions": [
+        {
+            "question": "Công việc quan trọng hàng đầu trong đời là gì?",
+            "choices": [
+                "Nhận diện và phân biệt được những vấn đề",
+                "Kiểm soát yếu tố ngoại cảnh",
+                "Quyết định cho chính mình",
+                "Thay đổi tương lai"
+            ],
+            "correctAnswer": "Nhận diện và phân biệt được những vấn đề"
+        }
+    ]
+}

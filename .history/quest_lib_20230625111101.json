@@ -1,0 +1,57 @@
+{
+    "questions": [
+      {
+        "question": "Hòn Ngọc Viễn Đông là tên gọi khác của đảo nào?",
+        "choices": [
+          "Côn Đảo",
+          "Phú Quốc",
+          "Nam Du",
+          "Cát Bà"
+        ],
+        "correctAnswer": "Phú Quốc"
+      },
+      {
+        "question": "Ai là vị vua cuối cùng của triều đại Lý?",
+        "choices": [
+          "Lý Thánh Tông",
+          "Lý Cao Tông",
+          "Lý Huệ Tông",
+          "Lý Nhân Tông"
+        ],
+        "correctAnswer": "Lý Nhân Tông"
+      },
+      [
+        {
+          "question": "Giá trị xã hội là gì?",
+          "choices": [
+            "Giá trị xã hội là một thuật ngữ đề cập đến giá trị và vai trò của mỗi cá nhân trong xã hội.",
+            "Giá trị xã hội là những nguyên tắc, niềm tin và quy tắc được chấp nhận và chia sẻ bởi cộng đồng.",
+            "Giá trị xã hội là những tiêu chuẩn và tiêu chí mà xã hội đề ra để đánh giá và định hình hành vi của mỗi người.",
+            "Giá trị xã hội là những mục tiêu và lý tưởng mà xã hội mong muốn đạt được và gìn giữ trong quá trình phát triển."
+          ],
+          "correctAnswer": "Giá trị xã hội là một thuật ngữ đề cập đến giá trị và vai trò của mỗi cá nhân trong xã hội."
+        },
+        {
+          "question": "Tại sao giá trị xã hội quan trọng?",
+          "choices": [
+            "Giá trị xã hội quan trọng vì nó giúp xác định hành vi và hướng dẫn con người trong xã hội.",
+            "Giá trị xã hội đóng vai trò quan trọng trong việc định hình quan hệ và tương tác giữa các thành viên trong xã hội.",
+            "Giá trị xã hội cung cấp một thước đo để đánh giá đúng sai và tạo ra sự công bằng và sự cân nhắc trong xã hội.",
+            "Giá trị xã hội đóng vai trò quan trọng trong việc duy trì trật tự và sự ổn định trong xã hội."
+          ],
+          "correctAnswer": "Giá trị xã hội đóng vai trò quan trọng trong việc định hình quan hệ và tương tác giữa các thành viên trong xã hội."
+        },
+        {
+          "question": "Ai xác định giá trị xã hội?",
+          "choices": [
+            "Giá trị xã hội được hình thành và xác định bởi tập quán, văn hóa, giáo dục và các yếu tố xã hội khác.",
+            "Giá trị xã hội phản ánh sự tương tác và sự thống nhất của các thành viên trong xã hội.",
+            "Giá trị xã hội được xác định thông qua quá trình định hình và thay đổi của xã hội theo thời gian.",
+            "Giá trị xã hội được tạo ra từ sự thỏa thuận và sự đồng thuận của các thành viên trong xã hội."
+          ],
+          "correctAnswer": "Giá trị xã hội được hình thành và xác định bởi tập quán, văn hóa, giáo dục và các yếu tố xã hội khác."
+        }
+      ]      
+    ]
+  }
+  

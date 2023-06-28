@@ -1,0 +1,115 @@
+{
+    "questions": [
+      {
+        "question": "Công việc quan trọng hàng đầu trong đời là gì?",
+        "choices": [
+          "Nhận diện và phân biệt được những vấn đề",
+          "Kiểm soát yếu tố ngoại cảnh",
+          "Quyết định cho chính mình",
+          "Thay đổi tương lai"
+        ],
+        "correctAnswer": "Nhận diện và phân biệt được những vấn đề"
+      },
+      {
+        "question": "Theo Epictetus, nhận diện tốt xấu là để nhận diện điều gì?",
+        "choices": [
+          "Nhận diện tốt xấu của người khác",
+          "Nhận diện tốt xấu của yếu tố ngoại cảnh",
+          "Nhận diện tốt xấu cho quyết định của chính mình",
+          "Nhận diện tốt xấu của tương lai"
+        ],
+        "correctAnswer": "Nhận diện tốt xấu cho quyết định của chính mình"
+      },
+      {
+        "question": "Công việc quan trọng nhất trong việc thực hành Chủ nghĩa Khắc kỷ là gì?",
+        "choices": [
+          "Phân biệt những thứ không thể thay đổi và những thứ có thể thay đổi",
+          "Chỉ phân biệt những thứ có thể thay đổi",
+          "Kiểm soát những thứ nằm ngoài tầm kiểm soát",
+          "Thay đổi tương lai"
+        ],
+        "correctAnswer": "Phân biệt những thứ không thể thay đổi và những thứ có thể thay đổi"
+      },
+      {
+        "question": "Điều gì là không thể thay đổi và không thể kiểm soát?",
+        "choices": [
+          "Thời tiết, chiều cao",
+          "Quốc gia sinh ra, sự thích hợp của người khác",
+          "Điều kiện gia đình, tuổi tác",
+          "cả 3 điều trên"
+        ],
+        "correctAnswer": "cả 3 điều trên"
+      },
+      {
+        "question": "Lời nguyện An tĩnh được nhắm đến việc gì?",
+        "choices": [
+          "Nhận diện được những điều không thể thay đổi",
+          "Nhận diện được những điều có thể thay đổi",
+          "Nhận diện được hai điều trên",
+          "Nhận diện được tương lai"
+        ],
+        "correctAnswer": "Nhận diện được hai điều trên"
+      },
+      {
+        "question": "Người nghiện ngập ở hiện tại có thể thay đổi được điều gì?",
+        "choices": [
+          "Quá khứ, lựa chọn của mình",
+          "Qúa khứ, tương lai",
+          "Tương lai, sức mạnh hiện tại",
+          "Quá khứ, hiện tại"
+        ],
+        "correctAnswer": "Tương lai, sức mạnh hiện tại"
+      },
+      {
+        "question": "Điều gì sẽ xảy ra nếu chúng ta tập trung vào việc xác định những thứ nằm trong và ngoài tầm kiểm soát của bản thân?",
+        "choices": [
+          "Chúng ta sẽ trở nên hạnh phúc hơn",
+          "Chúng ta sẽ có lợi thế hơn so với những người đấu tranh trong vô vọng",
+          "Chúng ta sẽ đấu tranh trong vô vọng",
+          "Chúng ta sẽ tìm ra sự thay đổi"
+        ],
+        "correctAnswer": "Chúng ta sẽ có lợi thế hơn so với những người đấu tranh trong vô vọng"
+      },
+      {
+        "question": "Thành quả của việc thực hiện theo lời dạy của ta là gì?",
+        "choices": [
+          "Sự thanh thản",
+          "Lòng dũng cảm",
+          "Sự tự do",
+          "Tất cả đều đúng"
+        ],
+        "correctAnswer": "Tất cả đều đúng"
+      },
+      {
+        "question": "Đặt niềm tin vào ai trong việc được giáo dục đúng cách?",
+        "choices": [
+          "Kẻ tự do",
+          "Những người trân quý kiến thức thật sự",
+          "Số đông",
+          "Tất cả đều sai"
+        ],
+        "correctAnswer": "Những người trân quý kiến thức thật sự"
+      },
+      {
+        "question": "Để sống tự do hơn và đạt được trạng thái bình yên, chúng ta cần làm gì?",
+        "choices": [
+          "Sống không sợ hãi",
+          "Học cách sống",
+          "Đọc sách và suy ngẫm về kiến thức uyên bác của những bộ óc vĩ đại",
+          "Tất cả đều đúng"
+        ],
+        "correctAnswer": "Tất cả đều đúng"
+      },
+      {
+        "question": "Việc tự học và tiếp thu kiến thức được coi như chìa khóa dẫn đến điều gì?",
+        "choices": [
+          "Tự do",
+          "Kiến thức",
+          "Sự uyên bác",
+          "Trạng thái bình yên"
+        ],
+        "correctAnswer": "Tự do"
+      }     
+    ]
+  }
+  

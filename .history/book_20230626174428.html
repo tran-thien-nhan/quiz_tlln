@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TLLN QUIZ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            /* Cập nhật chiều cao ở đây */
+            overflow: hidden;
+        }
+
+        .thumbnail {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: black;
+            opacity: 0.85;
+            font-size: 20px;
+            text-align: center;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- phần menu -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-white">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="triz_blog.html">Triz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tools.html">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="resources_blog.html">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end phần menu -->
+
+        <!-- phần tìm kiếm sách -->
+        <input class="mt-2" style="align-items: center;" type="text" id="searchInput" placeholder="Tìm kiếm tên sách...">
+        <!-- end phần tìm kiếm sách -->
+        <div class="row mt-2" id="bookContainer">
+        </div>
+    </div>
+    <br>
+    <a href="index.html" class="btn btn-danger" style="margin-left: 0.75rem;">Home</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lấy phần tử chứa sách
+            var bookContainer = document.getElementById("bookContainer");
+
+            // Tạo yêu cầu HTTP GET đến file JSON
+            var request = new XMLHttpRequest();
+            request.open("GET", "book.json", true);
+            request.onreadystatechange = function () {
+                if (request.readyState === 4 && request.status === 200) {
+                    // Parse dữ liệu JSON
+                    var data = JSON.parse(request.responseText);
+                    var items = data.items;
+
+                    // Tạo các sách dựa trên dữ liệu JSON
+                    items.forEach(function (item) {
+                        var bookElement = createBookElement(item);
+                        bookContainer.appendChild(bookElement);
+                    });
+
+                    // Xử lý sự kiện tìm kiếm khi thay đổi giá trị trong ô input
+                    var searchInput = document.getElementById("searchInput");
+                    searchInput.addEventListener("input", function () {
+                        var searchTerm = searchInput.value.toLowerCase();
+                        performSearch(searchTerm);
+                    });
+                }
+            };
+            request.send();
+
+            // Hàm tạo phần tử sách dựa trên dữ liệu JSON
+            function createBookElement(item) {
+                var bookLink = document.createElement("a");
+                bookLink.href = item.google_drive_link;
+                bookLink.target = "_blank";
+
+                var thumbnailContainer = document.createElement("div");
+                thumbnailContainer.className = "col-md-3";
+                bookLink.appendChild(thumbnailContainer);
+
+                var thumbnail = document.createElement("img");
+                thumbnail.src = item.image_link;
+                thumbnail.className = "thumbnail img-fluid";
+                thumbnail.alt = "Ảnh sách";
+                thumbnailContainer.appendChild(thumbnail);
+
+                var title = document.createElement("h5");
+                title.className = "title";
+                title.textContent = item.title;
+                thumbnailContainer.appendChild(title);
+
+                return bookLink;
+            }
+
+            // Hàm thực hiện tìm kiếm và ẩn hiện các sách dựa trên kết quả tìm kiếm
+            function performSearch(searchTerm) {
+                var thumbnailContainers = document.getElementsByClassName("col-md-3");
+                for (var i = 0; i < thumbnailContainers.length; i++) {
+                    var titleElement = thumbnailContainers[i].querySelector(".title");
+                    var title = titleElement.textContent.toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        thumbnailContainers[i].style.display = "block";
+                    } else {
+                        thumbnailContainers[i].style.display = "none";
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

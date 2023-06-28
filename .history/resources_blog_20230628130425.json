@@ -1,0 +1,39 @@
+{
+    "items": [
+        {
+            "link": "The_First_Oldschool_Redpill.html",
+            "image_link": "img/the_first_old_school_redpill.jpg",
+            "title": "The First Old School Redpill"
+        },
+        {
+            "link": "nhap_code_book.html",
+            "image_link": "https://about.proquest.com/globalassets/proquest/media/images/decrotive/oldbooks.jpg",
+            "title": "SÁCH"
+        },
+        {
+            "link": "health.html",
+            "image_link": "https://images2.thanhnien.vn/uploaded/ngocquy/2016_07_19/1-tap-gym-shutterstock_HCSN.jpg?width=500",
+            "title": "HEALTH - GYM"
+        },
+        {
+            "link": "vagabond.html",
+            "image_link": "https://m.media-amazon.com/images/I/713yOattgsL._AC_UF1000,1000_QL80_.jpg",
+            "title": "VAGABOND"
+        },
+        {
+            "link": "kho_clips.html",
+            "image_link": "img/youtube_logo.jpg",
+            "title": "TÀI NGUYÊN CLIPS"
+        },
+        {
+            "link": "summary.html",
+            "image_link": "https://i.ex-cdn.com/mgn.vn/files/content/2021/06/25/pp5-1724.jpg",
+            "title": "TÓM TẮT CÁC NỘI DUNG"
+        },
+        {
+            "link": "blog.html",
+            "image_link": "img/the_matrix_all.webp",
+            "title": "BLOG - CÁC BÀI VIẾT HAY"
+        }
+    ]
+}

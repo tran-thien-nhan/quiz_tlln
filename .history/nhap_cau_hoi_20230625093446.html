@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nhập câu hỏi</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Nhập câu hỏi</h1>
+
+    <form id="question-form">
+      <div class="mb-3">
+        <label for="question">Câu hỏi:</label>
+        <textarea id="question" name="question" class="form-control" rows="3"></textarea>
+      </div>
+      <div class="mb-3">
+        <label for="answer1">Câu trả lời 1:</label>
+        <input type="text" id="answer1" name="answer1" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="answer2">Câu trả lời 2:</label>
+        <input type="text" id="answer2" name="answer2" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="answer3">Câu trả lời 3:</label>
+        <input type="text" id="answer3" name="answer3" class="form-control">
+      </div>
+      <div class="mb-3">
+        <label for="answer4">Câu trả lời 4:</label>
+        <input type="text" id="answer4" name="answer4" class="form-control">
+      </div>
+      <button type="submit" class="btn btn-primary">Thêm câu hỏi</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

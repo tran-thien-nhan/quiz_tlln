@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trắc nghiệm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+    <style>
+        .correct-feedback {
+            color: green;
+        }
+
+        .incorrect-feedback {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bài trắc nghiệm -->
+    <div id="quizContainer">
+        <h1>Bài trắc nghiệm</h1>
+        <div id="question"></div>
+        <div id="choices"></div>
+        <button id="nextBtn" class="btn btn-primary">Câu kế tiếp</button>
+        <button id="submitBtn" class="btn btn-primary">Nộp bài</button>
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Hiển thị bài trắc nghiệm
+        function showQuiz() {
+            $('#quizContainer').show();
+            loadQuestions();
+        }
+
+        // Load câu hỏi từ file JSON
+        function loadQuestions() {
+            $.getJSON('quest_lib.json', function (data) {
+                var questions = data.questions;
+                sessionStorage.setItem('questions', JSON.stringify(questions));
+                showQuestion(0);
+            }).fail(function () {
+                alert('Không thể tải câu hỏi. Vui lòng thử lại sau.');
+            });
+        }
+
+        // Hiển thị câu hỏi và lựa chọn
+        function showQuestion(index) {
+            var questions = JSON.parse(sessionStorage.getItem('questions'));
+            var question = questions[index];
+            $('#question').text(question.question);
+            var choices = question.choices;
+            var shuffledChoices = shuffleArray(choices);
+            $('#choices').empty();
+            for (var i = 0; i < shuffledChoices.length; i++) {
+                var choice = shuffledChoices[i];
+                var radioBtn = $('<input type="radio" name="choice" value="' + choice + '"> ' + choice + '<br>');
+                $('#choices').append(radioBtn);
+            }
+        }
+
+        // Xáo trộn mảng
+        function shuffleArray(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
+        }
+
+        // Xử lý nút Câu kế tiếp
+        // function processNextQuestion() {
+        //     var selectedChoice = $('input[name="choice"]:checked').val();
+
+        //     // Kiểm tra xem người dùng đã chọn câu trả lời hay chưa
+        //     if (!selectedChoice) {
+        //         alert('Vui lòng chọn câu trả lời.');
+        //         return;
+        //     }
+        //     var currentQuestionIndex = parseInt(sessionStorage.getItem('currentQuestionIndex'));
+        //     var questions = JSON.parse(sessionStorage.getItem('questions'));
+        //     var currentQuestion = questions[currentQuestionIndex];
+        //     var correctAnswer = currentQuestion.correctAnswer;
+        //     var score = parseInt(sessionStorage.getItem('score'));
+
+        //     // Kiểm tra xem người dùng đã chọn đúng hay sai đáp án
+        //     var isCorrect = selectedChoice === correctAnswer;
+
+        //     // Nếu chọn đúng, tăng điểm
+        //     if (isCorrect) {
+        //         score += 1;
+        //     }
+
+        //     currentQuestionIndex += 1;
+        //     sessionStorage.setItem('currentQuestionIndex', currentQuestionIndex);
+        //     sessionStorage.setItem('score', score);
+
+        //     if (currentQuestionIndex < questions.length) {
+        //         showQuestion(currentQuestionIndex);
+        //     } else {
+        //         showResult();
+        //     }
+        // }
+
+        // Xử lý nút Câu kế tiếp
+        $('#nextBtn').click(function () {
+            var selectedChoice = $('input[name="choice"]:checked').val();
+
+            // Kiểm tra xem người dùng đã chọn câu trả lời hay chưa
+            if (!selectedChoice) {
+                alert('Vui lòng chọn câu trả lời.');
+                return;
+            }
+            var currentQuestionIndex = parseInt(sessionStorage.getItem('currentQuestionIndex'));
+            var questions = JSON.parse(sessionStorage.getItem('questions'));
+            var currentQuestion = questions[currentQuestionIndex];
+            var correctAnswer = currentQuestion.correctAnswer;
+            var score = parseInt(sessionStorage.getItem('score'));
+
+            // Kiểm tra xem người dùng đã chọn đúng hay sai đáp án
+            var isCorrect = selectedChoice === correctAnswer;
+
+            // Nếu chọn đúng, tăng điểm
+            if (isCorrect) {
+                score += 1;
+            }
+
+            currentQuestionIndex += 1;
+            sessionStorage.setItem('currentQuestionIndex', currentQuestionIndex);
+            sessionStorage.setItem('score', score);
+
+            // Ẩn các câu trả lời và nút "Câu kế tiếp"
+            $('#choices').empty();
+            $('#nextBtn').hide();
+
+            if (currentQuestionIndex < questions.length) {
+                // Hiển thị thông báo "correct" hoặc "incorrect"
+                var feedbackElement = $('<span></span>');
+                feedbackElement.addClass(isCorrect ? 'correct-feedback' : 'incorrect-feedback');
+                feedbackElement.text(isCorrect ? 'correct' : 'incorrect');
+                $('#choices').append(feedbackElement);
+
+                // Delay 1 giây trước khi hiển thị câu hỏi kế tiếp
+                setTimeout(function () {
+                    showQuestion(currentQuestionIndex);
+                    $('#nextBtn').show();
+                }, 1000);
+            } else {
+                showResult();
+            }
+        });
+
+
+        // Hiển thị kết quả
+        function showResult() {
+            var score = parseInt(sessionStorage.getItem('score'));
+            var totalQuestions = JSON.parse(sessionStorage.getItem('questions')).length;
+            var percentage = (score / totalQuestions) * 100;
+            $('#quizContainer').hide();
+            $('#result').text('Điểm số: ' + score + '/' + totalQuestions + ' (' + percentage + '%)').show();
+        }
+
+        // Kiểm tra đăng nhập khi tải trang
+        $(document).ready(function () {
+            showQuiz();
+        });
+    </script>
+</body>
+
+</html>

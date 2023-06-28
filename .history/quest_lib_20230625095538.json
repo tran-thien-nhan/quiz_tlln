@@ -1,0 +1,105 @@
+{
+    "questions": [
+      {
+        "question": "Hòn Ngọc Viễn Đông là tên gọi khác của đảo nào?",
+        "choices": [
+          "Côn Đảo",
+          "Phú Quốc",
+          "Nam Du",
+          "Cát Bà"
+        ],
+        "correctAnswer": "Phú Quốc"
+      },
+      {
+        "question": "Ai là vị vua cuối cùng của triều đại Lý?",
+        "choices": [
+          "Lý Thánh Tông",
+          "Lý Cao Tông",
+          "Lý Huệ Tông",
+          "Lý Nhân Tông"
+        ],
+        "correctAnswer": "Lý Nhân Tông"
+      },
+      {
+        "question": "Thành phố Hội An thuộc tỉnh nào của Việt Nam?",
+        "choices": [
+          "Quảng Ninh",
+          "Quảng Bình",
+          "Quảng Trị",
+          "Quảng Nam"
+        ],
+        "correctAnswer": "Quảng Nam"
+      },
+      {
+        "question": "Ngọn núi nào là đỉnh cao nhất Việt Nam?",
+        "choices": [
+          "Phan Xi Păng",
+          "Fansipan",
+          "Bạch Mã",
+          "Bidoup Núi Bà"
+        ],
+        "correctAnswer": "Fansipan"
+      },
+      {
+        "question": "Vua Hùng đầu tiên của Việt Nam là ai?",
+        "choices": [
+          "Hùng Vương I",
+          "Hùng Vương II",
+          "Hùng Vương III",
+          "Hùng Vương IV"
+        ],
+        "correctAnswer": "Hùng Vương I"
+      },
+      {
+        "question": "Di tích cố đô Huế nằm ở tỉnh nào của Việt Nam?",
+        "choices": [
+          "Thừa Thiên Huế",
+          "Quảng Trị",
+          "Đà Nẵng",
+          "Quảng Bình"
+        ],
+        "correctAnswer": "Thừa Thiên Huế"
+      },
+      {
+        "question": "Vịnh Hạ Long thuộc tỉnh nào của Việt Nam?",
+        "choices": [
+          "Quảng Ninh",
+          "Thái Bình",
+          "Nam Định",
+          "Hải Phòng"
+        ],
+        "correctAnswer": "Quảng Ninh"
+      },
+      {
+        "question": "Ai là người thành lập nên Vương quốc Chăm Pa?",
+        "choices": [
+          "Vijaya",
+          "Indravarman I",
+          "Bhadravarman I",
+          "Satyavarman"
+        ],
+        "correctAnswer": "Vijaya"
+      },
+      {
+        "question": "Vịnh Xuân Đài là vịnh nằm ở tỉnh nào của Việt Nam?",
+        "choices": [
+          "Quảng Ninh",
+          "Hải Phòng",
+          "Nam Định",
+          "Thái Bình"
+        ],
+        "correctAnswer": "Nam Định"
+      },
+      {
+        "question": "Bảo tàng Lịch sử Quốc gia Việt Nam được đặt ở thành phố nào?",
+        "choices": [
+          "Hà Nội",
+          "Hải Phòng",
+          "Huế",
+          "Hồ Chí Minh"
+        ],
+        "correctAnswer": "Hà Nội"
+      }
+    ]
+  }
+  

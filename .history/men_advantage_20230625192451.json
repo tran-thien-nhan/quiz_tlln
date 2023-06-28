@@ -1,0 +1,16 @@
+{
+    "questions": [
+        {
+            "question": "what is this ?",
+            "image": "img/men_advantage/smv.webp",
+            "choices": [
+                "đồ thị SMV",
+                "đồ thị simp lỏ",
+                "đồ thị LGBT",
+                "đồ thị kinh tế"
+            ],
+            "correctAnswer": "đồ thị SMV"
+        }
+    ]
+}
+

@@ -1,0 +1,16 @@
+{
+    "questions": [
+        {
+            "question": "what is this ?",
+            "image": "img/men_advantage/smv.webp",
+            "choices": [
+                "Nhận diện và phân biệt được những vấn đề",
+                "Kiểm soát yếu tố ngoại cảnh",
+                "Quyết định cho chính mình",
+                "Thay đổi tương lai"
+            ],
+            "correctAnswer": "Nhận diện và phân biệt được những vấn đề"
+        }
+    ]
+}
+

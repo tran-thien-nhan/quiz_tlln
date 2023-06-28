@@ -1,0 +1,22 @@
+body {
+    padding-top: 50px;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  #login-form,
+  #register-form,
+  #admin-form,
+  #quiz,
+  #result {
+    display: none;
+  }
+  
+  #result {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  

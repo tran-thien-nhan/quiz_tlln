@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trắc nghiệm</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+  <style>
+    .question {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Trắc nghiệm</h1>
+
+    <div class="question" id="questionContainer">
+      <h3 id="question"></h3>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="answer" id="answer1">
+        <label class="form-check-label" for="answer1" id="answerText1"></label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="answer" id="answer2">
+        <label class="form-check-label" for="answer2" id="answerText2"></label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="answer" id="answer3">
+        <label class="form-check-label" for="answer3" id="answerText3"></label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="answer" id="answer4">
+        <label class="form-check-label" for="answer4" id="answerText4"></label>
+      </div>
+      <span id="result"></span>
+    </div>
+
+    <button class="btn btn-primary" id="nextButton">Tiếp theo</button>
+    <span id="score"></span>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Đọc câu hỏi từ tệp JSON
+    fetch("quest_lib.json")
+      .then(response => response.json())
+      .then(data => {
+        const questions = data.questions;
+
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        const questionContainer = document.getElementById("questionContainer");
+        const questionElement = document.getElementById("question");
+        const answerTextElements = [
+          document.getElementById("answerText1"),
+          document.getElementById("answerText2"),
+          document.getElementById("answerText3"),
+          document.getElementById("answerText4")
+        ];
+        const resultElement = document.getElementById("result");
+        const nextButton = document.getElementById("nextButton");
+        const scoreElement = document.getElementById("score");
+
+        // Xáo trộn câu trả lời
+        function shuffleAnswers(answers) {
+          for (let i = answers.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [answers[i], answers[j]] = [answers[j], answers[i]];
+          }
+          return answers;
+        }
+
+        // Cập nhật câu hỏi và câu trả lời
+        function updateQuestion() {
+          const question = questions[currentQuestionIndex];
+          const shuffledAnswers = shuffleAnswers(question.choices);
+
+          questionElement.textContent = question.question;
+          resultElement.textContent = "";
+
+          for (let i = 0; i < answerTextElements.length; i++) {
+            answerTextElements[i].textContent = shuffledAnswers[i];
+          }
+        }
+
+        // Kiểm tra câu trả lời
+        function checkAnswer() {
+          const question = questions[currentQuestionIndex];
+          const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+
+          if (selectedAnswer) {
+            const selectedAnswerText = selectedAnswer.nextElementSibling.textContent;
+
+            if (selectedAnswerText === question.correctAnswer) {
+              score++;
+              resultElement.textContent = "Correct";
+              resultElement.style.color = "green";
+            } else {
+              resultElement.textContent = "Incorrect";
+              resultElement.style.color = "red";
+            }
+
+            setTimeout(() => {
+              currentQuestionIndex++;
+
+              if (currentQuestionIndex < questions.length) {
+                updateQuestion();
+                selectedAnswer.checked = false;
+                nextButton.disabled = true;
+                setTimeout(() => {
+                  nextButton.disabled = false;
+                }, 200);
+              } else {
+                questionContainer.style.display = "none";
+                scoreElement.textContent = `Tổng điểm: ${score}`;
+                scoreElement.style.display = "block";
+              }
+            }, 200);
+          }
+        }
+
+        // Xử lý sự kiện khi nhấn nút "Tiếp theo"
+        nextButton.addEventListener("click", () => {
+          checkAnswer();
+        });
+
+        // Bắt đầu trắc nghiệm
+        updateQuestion();
+      })
+      .catch(error => {
+        console.error("Error:", error);
+      });
+  </script>
+</body>
+
+</html>

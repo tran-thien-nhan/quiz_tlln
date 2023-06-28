@@ -18,12 +18,8 @@
       background-color: #fff;
       padding: 2rem;
       width: 30rem;
-      height: 25rem;
+      height: 15rem;
       border-radius: 5px;
-    }
-
-    .form-group {
-      display: none;
     }
 
     #button-group {
@@ -31,128 +27,42 @@
       justify-content: center;
       margin-top: 1rem;
     }
-    h2{
-        text-align: center;
-        color: red;
+
+    h2 {
+      text-align: center;
+      color: red;
     }
   </style>
-  <title>TLLN</title>
+  <title>nhập code</title>
 </head>
 
 <body>
   <div class="container">
-    <h1>Registration and Login</h1>
-    <div id="registration-form" class="form-group">
-      <h2>Registration</h2>
-      <form id="registerForm">
-        <div class="mb-3">
-          <label for="registerUsername" class="form-label">Username</label>
-          <input type="text" class="form-control" id="registerUsername" required>
-        </div>
-        <div class="mb-3">
-          <label for="registerPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="registerPassword" required>
-        </div>
-        <button id="regis-btn" type="submit" class="btn btn-primary">Register</button>
-      </form>
-    </div>
-
-    <div id="login-form" class="form-group">
-      <h2>Login</h2>
-      <form id="loginForm">
-        <div class="mb-3">
-          <label for="loginUsername" class="form-label">Username</label>
-          <input type="text" class="form-control" id="loginUsername" required>
-        </div>
-        <div class="mb-3">
-          <label for="loginPassword" class="form-label">Password</label>
-          <input type="password" class="form-control" id="loginPassword" required>
-        </div>
-        <button id="login-btn" type="submit" class="btn btn-primary">Login</button>
-      </form>
-    </div>
-
-    <div id="button-group">
-      <button id="registerBtn" class="btn btn-primary" style="margin-right: 2rem;">Register</button>
-      <button id="loginBtn" class="btn btn-success">Login</button>
-    </div>
+    <h1>Enter the Code</h1>
+    <form id="codeForm">
+      <div class="mb-3">
+        <br>
+        <input type="password" class="form-control border-dark rounded" id="codeInput" placeholder="nhập code ở đây..." required>
+        <span id="alert"></span>
+      </div>
+    </form>
   </div>
 
   <script>
-    // Function to set a cookie
-    function setCookie(name, value, days) {
-      var expires = "";
-      if (days) {
-        var date = new Date();
-        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-        expires = "; expires=" + date.toUTCString();
-      }
-      document.cookie = name + "=" + (value || "") + expires + "; path=/";
-    }
-
-    // Function to get a cookie value
-    function getCookie(name) {
-      var nameEQ = name + "=";
-      var ca = document.cookie.split(';');
-      for (var i = 0; i < ca.length; i++) {
-        var c = ca[i];
-        while (c.charAt(0) == ' ') {
-          c = c.substring(1, c.length);
-        }
-        if (c.indexOf(nameEQ) == 0) {
-          return c.substring(nameEQ.length, c.length);
-        }
-      }
-      return null;
-    }
-
-    // Function to delete a cookie
-    function deleteCookie(name) {
-      document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT; path=/;';
-    }
-
-    // Show registration form and hide login form
-    function showRegistrationForm() {
-      document.getElementById("registration-form").style.display = "block";
-      document.getElementById("login-form").style.display = "none";
-      document.getElementById("regis-btn").style.display = "none";
-    }
-
-    // Show login form and hide registration form
-    function showLoginForm() {
-      document.getElementById("registration-form").style.display = "none";
-      document.getElementById("login-form").style.display = "block";
-      document.getElementById("login-btn").style.display = "none";
-    }
-
-    // Registration form submission handler
-    document.getElementById("registerForm").addEventListener("submit", function (event) {
+    // Code form submission handler
+    document.getElementById("codeForm").addEventListener("submit", function (event) {
       event.preventDefault();
-      var username = document.getElementById("registerUsername").value;
-      var password = document.getElementById("registerPassword").value;
-      setCookie("username", username, 7);
-      setCookie("password", password, 7);
-      alert("Registration successful!");
-    });
-
-    // Login form submission handler
-    document.getElementById("loginForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-      var username = document.getElementById("loginUsername").value;
-      var password = document.getElementById("loginPassword").value;
-      var storedUsername = getCookie("username");
-      var storedPassword = getCookie("password");
-      if (username === storedUsername && password === storedPassword) {
-        alert("Login successful!");
-        window.location.href = "quiz.html"; // Chuyển hướng sang trang index.html
+      var code = document.getElementById("codeInput").value;
+      var alertSpan = document.getElementById("alert");
+      if (code === "TLLN12345") {
+        alertSpan.textContent = "Correct!";
+        alertSpan.style.color = "green";
+        window.location.href = "quiz.html"; // Chuyển hướng sang trang quiz.html
       } else {
-        alert("Invalid username or password.");
+        alertSpan.textContent = "Invalid code";
+        alertSpan.style.color = "red";
       }
     });
-
-    // Button click event handlers
-    document.getElementById("registerBtn").addEventListener("click", showRegistrationForm);
-    document.getElementById("loginBtn").addEventListener("click", showLoginForm);
   </script>
 </body>
 

@@ -1,0 +1,313 @@
+{
+    "questions": [
+      {
+        "question": "Công việc quan trọng hàng đầu trong đời là gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Nhận diện và phân biệt được những vấn đề",
+          "Kiểm soát yếu tố ngoại cảnh",
+          "Quyết định cho chính mình",
+          "Thay đổi tương lai"
+        ],
+        "correctAnswer": "Nhận diện và phân biệt được những vấn đề"
+      },
+      {
+        "question": "Theo Epictetus, nhận diện tốt xấu là để nhận diện điều gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Nhận diện tốt xấu của người khác",
+          "Nhận diện tốt xấu của yếu tố ngoại cảnh",
+          "Nhận diện tốt xấu cho quyết định của chính mình",
+          "Nhận diện tốt xấu của tương lai"
+        ],
+        "correctAnswer": "Nhận diện tốt xấu cho quyết định của chính mình"
+      },
+      {
+        "question": "Công việc quan trọng nhất trong việc thực hành Chủ nghĩa Khắc kỷ là gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Phân biệt những thứ không thể thay đổi và những thứ có thể thay đổi",
+          "Chỉ phân biệt những thứ có thể thay đổi",
+          "Kiểm soát những thứ nằm ngoài tầm kiểm soát",
+          "Thay đổi tương lai"
+        ],
+        "correctAnswer": "Phân biệt những thứ không thể thay đổi và những thứ có thể thay đổi"
+      },
+      {
+        "question": "Điều gì là không thể thay đổi và không thể kiểm soát?",
+        "image": "img.jpg",
+        "choices": [
+          "Thời tiết, chiều cao",
+          "Quốc gia sinh ra, sự thích hợp của người khác",
+          "Điều kiện gia đình, tuổi tác",
+          "cả 3 điều trên"
+        ],
+        "correctAnswer": "cả 3 điều trên"
+      },
+      {
+        "question": "Lời nguyện An tĩnh được nhắm đến việc gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Nhận diện được những điều không thể thay đổi",
+          "Nhận diện được những điều có thể thay đổi",
+          "Nhận diện được hai điều trên",
+          "Nhận diện được tương lai"
+        ],
+        "correctAnswer": "Nhận diện được hai điều trên"
+      },
+      {
+        "question": "Người nghiện ngập ở hiện tại có thể thay đổi được điều gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Quá khứ, lựa chọn của mình",
+          "Qúa khứ, tương lai",
+          "Tương lai, sức mạnh hiện tại",
+          "Quá khứ, hiện tại"
+        ],
+        "correctAnswer": "Tương lai, sức mạnh hiện tại"
+      },
+      {
+        "question": "Điều gì sẽ xảy ra nếu chúng ta tập trung vào việc xác định những thứ nằm trong và ngoài tầm kiểm soát của bản thân?",
+        "image": "img.jpg",
+        "choices": [
+          "Chúng ta sẽ trở nên hạnh phúc hơn",
+          "Chúng ta sẽ có lợi thế hơn so với những người đấu tranh trong vô vọng",
+          "Chúng ta sẽ đấu tranh trong vô vọng",
+          "Chúng ta sẽ tìm ra sự thay đổi"
+        ],
+        "correctAnswer": "Chúng ta sẽ có lợi thế hơn so với những người đấu tranh trong vô vọng"
+      },
+      {
+        "question": "Thành quả của việc thực hiện theo lời dạy của epictetus là gì trong GIÁO DỤC LÀ TỰ DO ?",
+        "image": "img.jpg",
+        "choices": [
+          "Sự thanh thản",
+          "Lòng dũng cảm",
+          "Sự tự do",
+          "Tất cả đều đúng"
+        ],
+        "correctAnswer": "Tất cả đều đúng"
+      },
+      {
+        "question": "Đặt niềm tin vào ai trong việc được giáo dục đúng cách?",
+        "image": "img.jpg",
+        "choices": [
+          "Kẻ tự do",
+          "Những người trân quý kiến thức thật sự",
+          "Số đông",
+          "Tất cả đều sai"
+        ],
+        "correctAnswer": "Những người trân quý kiến thức thật sự"
+      },
+      {
+        "question": "Để sống tự do hơn và đạt được trạng thái bình yên, chúng ta cần làm gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Sống không sợ hãi",
+          "Học cách sống",
+          "Đọc sách và suy ngẫm về kiến thức uyên bác của những bộ óc vĩ đại",
+          "Tất cả đều đúng"
+        ],
+        "correctAnswer": "Tất cả đều đúng"
+      },
+      {
+        "question": "Việc tự học và tiếp thu kiến thức được coi như chìa khóa dẫn đến điều gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Tự do",
+          "Kiến thức",
+          "Sự uyên bác",
+          "Trạng thái bình yên"
+        ],
+        "correctAnswer": "Tự do"
+      },
+      {
+        "question": "Điều gì sẽ xảy ra nếu chúng ta không nhận thức được những gì mình đã đánh mất?",
+        "image": "img.jpg",
+        "choices": [
+          "Chúng ta sẽ sống bình thường",
+          "Chúng ta sẽ chết dần chết mòn",
+          "Chúng ta sẽ tìm lại được những gì đã mất",
+          "Chúng ta sẽ hối tiếc"
+        ],
+        "correctAnswer": "Chúng ta sẽ chết dần chết mòn"
+      },
+      {
+        "question": "Trước những thứ không quan trọng, chúng ta nên làm gì để lấy lại chút thời gian?",
+        "image": "img.jpg",
+        "choices": [
+          "Nói 'Không'",
+          "Tham gia với số đông",
+          "Tự hỏi làm sao để kiểm soát kỹ",
+          "Hối tiếc về những điều đã làm"
+        ],
+        "correctAnswer": "Nói 'Không'"
+      },
+      {
+        "question": "Nói 'Không' trước những thứ không quan trọng có thể gây hại đến ai?",
+        "image": "img.jpg",
+        "choices": [
+          "Bản thân chúng ta",
+          "Những người khác",
+          "Không có ai",
+          "Chúng ta sẽ cảm thấy tổn thương"
+        ],
+        "correctAnswer": "Những người khác"
+      },
+      {
+        "question": "Việc từ chối những thứ không quan trọng cho phép chúng ta có thời gian cho điều gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Những điều thật sự cần thiết",
+          "Sống và tận hưởng cuộc sống của chính mình",
+          "Cuộc sống bình thường",
+          "Đạt được thành công"
+        ],
+        "correctAnswer": "Sống và tận hưởng cuộc sống của chính mình"
+      },
+      {
+        "question": "Ba nguyên tắc quan trọng nhất trong triết lý Khắc kỷ là gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Nhận thức, hành động, ý chí",
+          "Chắc chắn, hành động, biết ơn",
+          "Kiểm soát nhận thức, hành động đúng đắn, sẵn lòng chấp nhận",
+          "Kiểm soát, hành động, triết lý"
+        ],
+        "correctAnswer": "Kiểm soát nhận thức, hành động đúng đắn, sẵn lòng chấp nhận"
+      },
+      {
+        "question": "Theo triết lý Khắc kỷ, điều gì là thiết yếu trong việc kiểm soát nhận thức của bạn?",
+        "image": "img.jpg",
+        "choices": [
+          "Niềm tin độc đáo của các nhà Khắc kỷ",
+          "Triết lý của Heraclitus và Zeno",
+          "Sự phán xét ở thời điểm hiện tại",
+          "Ý chí và ý thức của bản thân"
+        ],
+        "correctAnswer": "Sự phán xét ở thời điểm hiện tại"
+      },
+      {
+        "question": "Hành động một cách đúng đắn là một trong ba phần thiết yếu của triết lý Khắc kỷ. Điều gì được ám chỉ bởi việc hành động đúng đắn?",
+        "image": "img.jpg",
+        "choices": [
+          "Tìm hiểu về Heraclitus và Zeno",
+          "Đạt được sự phán xét chắc chắn",
+          "Hành động vì lợi ích chung trong thời điểm hiện tại",
+          "Thể hiện triết lý của các nhà Khắc kỷ"
+        ],
+        "correctAnswer": "Hành động vì lợi ích chung trong thời điểm hiện tại"
+      },
+      {
+        "question": "Điều gì là sự chuẩn bị tinh thần quan trọng để chấp nhận những gì ngoài tầm kiểm soát của bạn?",
+        "image": "img.jpg",
+        "choices": [
+          "Sự biết ơn với mọi điều bạn đã nhận được",
+          "Sự tận hưởng cuộc sống hàng ngày",
+          "Ý chí và ý thức của bản thân",
+          "Sự phán xét ở thời điểm hiện tại"
+        ],
+        "correctAnswer": "Sự biết ơn với mọi điều bạn đã nhận được"
+      },
+      {
+        "question": "Bạn đến sân bay muộn và chuyến bay của bạn đã cất cánh. Bạn rất tức giận vì đã bỏ lỡ chuyến bay. Bạn nên làm gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Gào thét vào mặt nhân viên đại diện của hãng hàng không",
+          "Ngồi lại và suy nghĩ về những điều bạn có thể kiểm soát",
+          "Hủy bỏ hành trình và trở về nhà",
+          "Buồn bã và căng thẳng trong suốt cả ngày"
+        ],
+        "correctAnswer": "Ngồi lại và suy nghĩ về những điều bạn có thể kiểm soát"
+      },
+      {
+        "question": "Bạn muốn thay đổi chiều cao của mình và nước sống ở một đất nước khác. Bạn nên làm gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Cố gắng ước mơ và thay đổi chiều cao của mình",
+          "Đau khổ vì không thể thay đổi điều đó",
+          "Tìm hiểu về các phương pháp tăng chiều cao và di cư",
+          "Chấp nhận chiều cao của mình và tận hưởng cuộc sống hiện tại"
+        ],
+        "correctAnswer": "Chấp nhận chiều cao của mình và tận hưởng cuộc sống hiện tại"
+      },
+      {
+        "question": "Bạn muốn có một người bạn đồng hành và thích bạn. Bạn nên làm gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Cố gắng làm cho người đó thích bạn",
+          "Đau khổ vì không thể khiến người đó thích bạn",
+          "Tự thay đổi và cải thiện bản thân để thu hút người khác",
+          "Chấp nhận sự thật rằng không thể khiến một người thích mình"
+        ],
+        "correctAnswer": "Tự thay đổi và cải thiện bản thân để thu hút người khác"
+      },
+      {
+        "question": "Bạn đã trải qua quá khứ đau khổ và gặp rắc rối trong cuộc sống. Bạn nên làm gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Mắc kẹt trong quá khứ và không thể thay đổi điều đó",
+          "Ngồi lại suy nghĩ về quá khứ và phàn nàn",
+          "Chấp nhận quá khứ và tập trung vào tương lai",
+          "Buồn bã và cảm thấy vô vọng"
+        ],
+        "correctAnswer": "Chấp nhận quá khứ và tập trung vào tương lai"
+      },
+      {
+        "question": "Theo ý kiến của Seneca, điều gì là nguyên nhân khiến con người trở nên điên dại?",
+        "image": "img.jpg",
+        "choices": [
+          "Quan điểm sai lệch về những thứ mà họ hướng tới",
+          "Sự việc mà họ muốn đạt được",
+          "Không có kế hoạch từ đầu đến cuối",
+          "Tâm trạng chán nản"
+        ],
+        "correctAnswer": "Quan điểm sai lệch về những thứ mà họ hướng tới"
+      },
+      {
+        "question": "Theo Robert Greene, việc lập kế hoạch từ đầu đến cuối có tác dụng gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Tránh choáng ngợp bởi hoàn cảnh",
+          "Đạt được kết quả tốt nhất",
+          "Đảm bảo sự thành công",
+          "Hạn chế thất bại"
+        ],
+        "correctAnswer": "Tránh choáng ngợp bởi hoàn cảnh"
+      },
+      {
+        "question": "Thói quen thứ hai trong 7 Thói quen của người thành đạt là gì?",
+        "image": "img.jpg",
+        "choices": [
+          "Bắt đầu với một cái kết trong tâm trí",
+          "Lập kế hoạch chi tiết từ đầu đến cuối",
+          "Hình dung ra cái kết trong đầu",
+          "Đặt mục tiêu cụ thể"
+        ],
+        "correctAnswer": "Bắt đầu với một cái kết trong tâm trí"
+      },
+      {
+        "question": "Theo nhà Khắc kỷ, sự lạc lối và hỗn loạn trong hành vi xảy ra khi?",
+        "image": "img.jpg",
+        "choices": [
+          "Không có những nỗ lực hướng vào nguyên nhân và mục đích",
+          "Quá tập trung vào kế hoạch từ đầu đến cuối",
+          "Chịu trách nhiệm với những xao nhãng trong tâm hồn",
+          "Không biết khi nào nói có và khi nào nói không"
+        ],
+        "correctAnswer": "Không có những nỗ lực hướng vào nguyên nhân và mục đích"
+      },
+      {
+        "question": "khi mất đi sự định nghĩa, con người có thể bị lạc lối vào phương hướng nào?",
+        "image": "img.jpg",
+        "choices": [
+          "Phương hướng vô định",
+          "Phương hướng cụ thể",
+          "Phương hướng chính xác",
+          "Phương hướng sáng suốt"
+        ],
+        "correctAnswer": "Phương hướng vô định"
+      }     
+    ]
+  }
+  

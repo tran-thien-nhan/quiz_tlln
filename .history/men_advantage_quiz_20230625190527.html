@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trắc nghiệm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/css/bootstrap.min.css">
+    <style>
+        .question {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Trắc nghiệm</h1>
+        <div id="timeclock"></div>
+        <div class="question" id="questionContainer">
+            <h3 id="question"></h3>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer1">
+                <label class="form-check-label" for="answer1" id="answerText1"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer2">
+                <label class="form-check-label" for="answer2" id="answerText2"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer3">
+                <label class="form-check-label" for="answer3" id="answerText3"></label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="answer" id="answer4">
+                <label class="form-check-label" for="answer4" id="answerText4"></label>
+            </div>
+            <span id="result"></span>
+        </div>
+
+        <button class="btn btn-primary" id="nextButton">Tiếp theo</button>
+        <span id="score"></span>
+        <a href="index.html" class="btn btn-danger" id="home">home</a>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thông báo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Bạn có 15 phút để làm trắc nghiệm.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.2/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

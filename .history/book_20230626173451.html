@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TLLN QUIZ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            /* Cập nhật chiều cao ở đây */
+            overflow: hidden;
+        }
+
+        .thumbnail {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: black;
+            opacity: 0.85;
+            font-size: 20px;
+            text-align: center;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- phần menu -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-white">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="triz_blog.html">Triz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tools.html">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="resources_blog.html">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end phần menu -->
+
+        <!-- phần tìm kiếm sách -->
+        <input class="mt-2" style="align-items: center;" type="text" id="searchInput" placeholder="Tìm kiếm tên sách...">
+        <!-- end phần tìm kiếm sách -->
+        <div class="row mt-2" id="thumbnailRow">
+        </div>
+    </div>
+    <br>
+    <a href="index.html" class="btn btn-danger" style="margin-left: 0.75rem;">Home</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Đọc tệp JSON
+        fetch('book.json')
+            .then(response => response.json())
+            .then(data => {
+                const thumbnailRow = document.getElementById('thumbnailRow');
+                const searchInput = document.getElementById('searchInput');
+
+                // Xử lý sự kiện tìm kiếm khi thay đổi giá trị trong ô input
+                searchInput.addEventListener("input", function () {
+                    var searchTerm = searchInput.value.toLowerCase();
+                    performSearch(searchTerm);
+                });
+
+                // Hiển thị tất cả các sách ban đầu
+                displayBooks(data.items);
+
+                function displayBooks(books) {
+                    thumbnailRow.innerHTML = '';
+
+                    for (let i = 0; i < books.length; i++) {
+                        const book = books[i];
+                        const thumbnailContainer = createThumbnailContainer(book);
+                        thumbnailRow.appendChild(thumbnailContainer);
+                    }
+                }
+
+                function createThumbnailContainer(book) {
+                    const thumbnailContainer = document.createElement('div');
+                    thumbnailContainer.className = 'col-lg-3 col-md-4 col-sm-6 col-xs-12 mb-4';
+
+                    const thumbnailLink = document.createElement('a');
+                    thumbnailLink.href = book.google_drive_link;
+
+                    const thumbnailImage = document.createElement('img');
+                    thumbnailImage.className = 'thumbnail';
+                    thumbnailImage.src = book.image_link;
+                    thumbnailImage.alt = book.title;
+
+                    const titleOverlay = document.createElement('div');
+                    titleOverlay.className = 'title';
+                    titleOverlay.innerText = book.title;
+
+                    thumbnailLink.appendChild(thumbnailImage);
+                    thumbnailContainer.appendChild(thumbnailLink);
+                    thumbnailContainer.appendChild(titleOverlay);
+
+                    return thumbnailContainer;
+                }
+
+                function performSearch(searchTerm) {
+                    const filteredBooks = data.items.filter(book => book.title.toLowerCase().includes(searchTerm));
+                    displayBooks(filteredBooks);
+                }
+            });
+    </script>
+</body>
+
+</html>

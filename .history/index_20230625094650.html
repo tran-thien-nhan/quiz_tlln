@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trắc nghiệm kiến thức</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Trắc nghiệm kiến thức</h1>
+        <!-- Form đăng nhập -->
+        <div id="login-form">
+            <h2>Đăng nhập</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="username">Tên đăng nhập:</label>
+                    <input type="text" id="username" name="username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="password">Mật khẩu:</label>
+                    <input type="password" id="password" name="password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng nhập</button>
+            </form>
+        </div>
+
+        <!-- Form đăng ký -->
+        <div id="register-form">
+            <h2>Đăng ký thành viên</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="register-username">Tên đăng ký:</label>
+                    <input type="text" id="register-username" name="register-username" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="register-password">Mật khẩu:</label>
+                    <input type="password" id="register-password" name="register-password" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Đăng ký</button>
+            </form>
+        </div>
+
+        <!-- Form nhập câu hỏi (dành cho admin) -->
+        <div id="admin-form">
+            <h2>Thêm câu hỏi</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="question">Câu hỏi:</label>
+                    <textarea id="question" name="question" class="form-control"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="answer1"> Câu trả lời 1: </label>
+                    <input type="text" id="answer1" name="answer1" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="answer2"> Câu trả lời 2: </label>
+                    <input type="text" id="answer2" name="answer2" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="answer3"> Câu trả lời 3: </label>
+                    <input type="text" id="answer3" name="answer3" class="form-control">
+                </div>
+                <div class="mb-3">
+                    <label for="answer4"> Câu trả lời 4: </label>
+                    <input type="text" id="answer4" name="answer4" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Thêm câu hỏi</button>
+            </form>
+        </div>
+
+        <!-- Trắc nghiệm -->
+        <div id="quiz">
+            <h2>Trắc nghiệm</h2>
+            <form>
+                <div id="question-container" class="mb-3"></div>
+                <button type="submit" class="btn btn-primary">Nộp bài</button>
+            </form>
+        </div>
+
+        <!-- Kết quả -->
+        <div id="result"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Sử dụng AJAX để đọc dữ liệu từ file JSON
+        var xhr = new XMLHttpRequest();
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var questions = JSON.parse(xhr.responseText);
+
+                // Hiển thị câu hỏi và câu trả lời
+                var questionContainer = document.getElementById('question-container');
+                questions.forEach(function (question) {
+                    var questionElement = document.createElement('div');
+                    questionElement.classList.add('mb-3');
+                    questionElement.innerHTML = '<p>' + question.question + '</p>';
+                    question.answers.forEach(function (answer) {
+                        var answerElement = document.createElement('div');
+                        answerElement.innerHTML = '<label><input type="radio" name="answer">' + answer + '</label>';
+                        questionElement.appendChild(answerElement);
+                    });
+                    questionContainer.appendChild(questionElement);
+                });
+            }
+        };
+        xhr.open('GET', 'quest_lib.json', true);
+        xhr.send();
+    </script>
+</body>
+
+</html>

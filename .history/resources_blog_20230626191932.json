@@ -1,0 +1,19 @@
+{
+    "items": [
+        {
+            "link": "The_First_Oldschool_Redpill.html",
+            "image_link": "img/the_first_old_school_redpill.jpg",
+            "title": "The First Old School Redpill"
+        },
+        {
+            "link": "book.html",
+            "image_link": "https://about.proquest.com/globalassets/proquest/media/images/decrotive/oldbooks.jpg",
+            "title": "SÁCH"
+        },
+        {
+            "link": "health.html",
+            "image_link": "https://images2.thanhnien.vn/uploaded/ngocquy/2016_07_19/1-tap-gym-shutterstock_HCSN.jpg?width=500",
+            "title": "HEALTH - GYM"
+        }
+    ]
+}

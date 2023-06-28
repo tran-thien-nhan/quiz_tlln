@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TLLN QUIZ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            /* Cập nhật chiều cao ở đây */
+            overflow: hidden;
+        }
+
+        .thumbnail {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: black;
+            opacity: 0.85;
+            font-size: 20px;
+            text-align: center;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- phần menu -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-white">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="quiz.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="triz_blog.html">Triz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tools.html">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="resources_blog.html">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end phần menu -->
+
+        <div style="display: flex;">
+            <!-- phần tìm kiếm sách -->
+            <input class="mt-2" style="align-items: center;" type="text" id="searchInput"
+                placeholder="Tìm kiếm tên sách...">
+            <!-- end phần tìm kiếm sách -->
+
+            <!-- phần lọc type -->
+            <div class="dropdown" style="margin-left: 2rem; margin-top: 0.5rem;">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    Thể loại
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <li><a class="dropdown-item" href="#" data-type="thể loại">Tất cả</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="redpill">Redpill</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="triết học">Triết học</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="sách thường">Sách thường</a></li>
+                </ul>
+            </div>
+
+            <!-- end phần lọc type -->
+        </div>
+
+        <div class="row mt-2 left-align" id="content">
+            <!-- Đây là nơi sẽ chứa các sách -->
+        </div>
+    </div>
+    <br>
+    <a href="quiz.html" class="btn btn-danger" style="margin-left: 0.75rem;">Home</a>
+    <a id="backButton" class="btn btn-secondary">Back</a>
+    <script src="back.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Lấy dữ liệu từ file JSON
+            fetch('book.json')
+                .then(response => response.json())
+                .then(data => {
+                    const items = data.items;
+                    const contentElement = document.getElementById('content');
+
+                    // Tạo các phần tử HTML dựa trên dữ liệu từ file JSON
+                    items.forEach(item => {
+                        const divElement = document.createElement('div');
+                        divElement.className = 'col-md-3 mt-2';
+
+                        const aElement = document.createElement('a');
+                        aElement.href = item.google_drive_link;
+                        aElement.target = '_blank';
+
+                        const thumbnailContainerElement = document.createElement('div');
+                        thumbnailContainerElement.className = 'thumbnail-container';
+
+                        const imgElement = document.createElement('img');
+                        imgElement.src = item.image_link;
+                        imgElement.className = 'thumbnail img-fluid';
+                        imgElement.alt = 'Image';
+
+                        const h5Element = document.createElement('h5');
+                        h5Element.className = 'title';
+                        h5Element.textContent = item.title;
+
+                        const typeElement = document.createElement('h5');
+                        typeElement.className = 'type';
+                        typeElement.textContent = item.type;
+
+                        // Gắn các phần tử vào DOM
+                        thumbnailContainerElement.appendChild(imgElement);
+                        thumbnailContainerElement.appendChild(h5Element);
+                        aElement.appendChild(thumbnailContainerElement);
+                        divElement.appendChild(aElement);
+                        thumbnailContainerElement.appendChild(typeElement);
+                        contentElement.appendChild(divElement);
+                    });
+                    
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+
+            // Lấy các phần tử cần sử dụng
+            var searchInput = document.getElementById("searchInput");
+            var thumbnailContainers = document.getElementsByClassName("thumbnail-container");
+
+            // Xử lý sự kiện tìm kiếm khi thay đổi giá trị trong ô input
+            searchInput.addEventListener("input", function () {
+                var searchTerm = searchInput.value.toLowerCase();
+                performSearch(searchTerm);
+            });
+
+            // Hàm thực hiện tìm kiếm và ẩn hiện các sách dựa trên kết quả tìm kiếm
+            function performSearch(searchTerm) {
+                for (var i = 0; i < thumbnailContainers.length; i++) {
+                    var titleElement = thumbnailContainers[i].querySelector(".title");
+                    var title = titleElement.textContent.toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        thumbnailContainers[i].style.display = "block";
+                    } else {
+                        thumbnailContainers[i].style.display = "none";
+                    }
+                }
+            }
+
+            // Lấy các phần tử cần sử dụng
+            var choices = document.getElementsByClassName("dropdown-item");
+
+            // Xử lý sự kiện khi chọn một thể loại sách trong dropdown menu
+            for (var i = 0; i < choices.length; i++) {
+                choices[i].addEventListener("click", function (event) {
+                    var selectedType = event.target.getAttribute("data-type");
+                    filterBooksByType(selectedType);
+                });
+            }
+
+            // Hàm thực hiện lọc sách dựa trên thể loại
+            function filterBooksByType(selectedType) {
+                for (var i = 0; i < thumbnailContainers.length; i++) {
+                    var typeElement = thumbnailContainers[i].querySelector(".type");
+                    var type = typeElement.textContent.toLowerCase();
+                    if (type === selectedType || selectedType === "thể loại") {
+                        thumbnailContainers[i].style.display = "block";
+                    } else {
+                        thumbnailContainers[i].style.display = "none";
+                    }
+                }
+            }
+
+        });
+    </script>
+
+
+</body>
+
+</html>

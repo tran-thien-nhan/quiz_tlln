@@ -1,0 +1,191 @@
+{
+    "questions": [
+        {
+            "question": "what is this ?",
+            "image": "img/men_advantage/smv.webp",
+            "choices": [
+                "đồ thị SMV",
+                "đồ thị simp lỏ",
+                "đồ thị LGBT",
+                "đồ thị kinh tế"
+            ],
+            "correctAnswer": "đồ thị SMV"
+        },
+        {
+            "question": "Giai đoạn nào trong đời đàn ông cần đối mặt với nhiều thử thách và quyết định theo bài viết?",
+            "image": "",
+            "choices": [
+                "Từ 18 đến 30 tuổi",
+                "Từ 30 đến 40 tuổi",
+                "Từ 40 đến 50 tuổi",
+                "Từ 50 tuổi trở đi"
+            ],
+            "correctAnswer": "Từ 18 đến 30 tuổi"
+        },
+        {
+            "question": "mục tiêu sống của đàn ông là gì?",
+            "image": "",
+            "choices": [
+                "Cố gắng, kiến tạo và tiếp tục đứng vững trong giới hạn ý chí",
+                "Có con đường tắt và 'kim bài miễn tử'",
+                "Tránh mọi thử thách và quyết định",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Cố gắng, kiến tạo và tiếp tục đứng vững trong giới hạn ý chí"
+        },
+        {
+            "question": "thành công của đàn ông phụ thuộc vào điều gì?",
+            "image": "",
+            "choices": [
+                "Hành động và quyết định của họ",
+                "May mắn và sự thuận lợi",
+                "Sự giúp đỡ từ người khác",
+                "Tất cả các lựa chọn đều đúng"
+            ],
+            "correctAnswer": "Hành động và quyết định của họ"
+        },
+        {
+            "question": "sự kiên nhẫn và chịu đựng quan trọng như thế nào?",
+            "image": "",
+            "choices": [
+                "Không quan trọng",
+                "Quan trọng để vượt qua khó khăn và đạt được thành công",
+                "Chỉ quan trọng đối với phụ nữ",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Quan trọng để vượt qua khó khăn và đạt được thành công"
+        },
+        {
+            "question": "những hoạt động nào giúp tăng cơ và giảm tỉ lệ mỡ cơ thể?",
+            "image": "",
+            "choices": [
+                "Ăn lành mạnh và tập gym",
+                "Ăn nhiều và tập gym",
+                "Ăn không lành mạnh và không tập gym",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Ăn lành mạnh và tập gym"
+        },
+        {
+            "question": "tỉ lệ mỡ thấp là chìa khóa để có khuôn mặt thu hút cho phái mạnh hay không?",
+            "image": "",
+            "choices": [
+                "Đúng",
+                "Sai",
+                "Chưa được đề cập",
+                "Không rõ"
+            ],
+            "correctAnswer": "Đúng"
+        },
+        {
+            "question": "một body có mỡ cơ thể dưới 10% sẽ đưa vào top mấy đàn ông với khuôn mặt thu hút?",
+            "image": "",
+            "choices": [
+                "Top 5%",
+                "Top 10%",
+                "Top 20%",
+                "Top 50%"
+            ],
+            "correctAnswer": "Top 5%"
+        },
+        {
+            "question": "điểm số trung bình mà một người đạt được chỉ bằng việc có thân hình săn chắc là bao nhiêu?",
+            "image": "",
+            "choices": [
+                "5 điểm",
+                "7 điểm",
+                "10 điểm",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "5 điểm"
+        },
+        {
+            "question": "việc cải thiện khuôn mặt có thể được đạt bằng cách nào?",
+            "image": "",
+            "choices": [
+                "Trường phái Orthotropics và các bài tập cổ/vùng dưới cằm",
+                "Tập thể dục và ăn lành mạnh",
+                "Phẫu thuật thẩm mỹ",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Trường phái Orthotropics và các bài tập cổ/vùng dưới cằm"
+        },
+        {
+            "question": "điểm số mà một người có thể đạt sau khi cải thiện cả thân hình lẫn khuôn mặt là bao nhiêu?",
+            "image": "",
+            "choices": [
+                "7 điểm",
+                "8 điểm",
+                "10 điểm",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "7 điểm"
+        },
+        {
+            "question": "phụ nữ được xếp hạng cao hơn đàn ông dựa vào yếu tố gì?",
+            "image": "",
+            "choices": [
+                "Ngoại hình",
+                "Phẩm chất khác ngoài ngoại hình",
+                "Sự hấp dẫn",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Phẩm chất khác ngoài ngoại hình"
+        },
+        {
+            "question": "điểm số 7/10 trong cuộc sống đánh giá vùng điểm nào?",
+            "image": "",
+            "choices": [
+                "Điểm vàng",
+                "Điểm bạc",
+                "Điểm kim cương",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Điểm vàng"
+        },
+        {
+            "question": "để đạt điểm số 10/10, một người cần làm gì?",
+            "image": "",
+            "choices": [
+                "Có ngoại hình hoàn hảo và phẩm chất nội tâm, ngoại tâm xuất sắc",
+                "Cao 193cm, đẹp trai, giàu có và có thân hình hoàn hảo",
+                "Có sự tự tin, kỹ năng lãnh đạo và giàu có",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Có ngoại hình hoàn hảo và phẩm chất nội tâm, ngoại tâm xuất sắc"
+        },
+        {
+            "question": "điểm số 10/10 tuyệt đối yêu cầu sự ảnh hưởng của yếu tố nào?",
+            "image": "",
+            "choices": [
+                "Ngoại hình",
+                "Tính cách",
+                "Sự giàu có",
+                "Trí tuệ"
+            ],
+            "correctAnswer": "Ngoại hình"
+        },
+        {
+            "question": "điểm số 10/10 được đạt nhờ những phẩm chất nào?",
+            "image": "",
+            "choices": [
+                "Tự tin, ăn mặc đẹp, vui tính, giàu có, khả năng lãnh đạo",
+                "Kỹ năng hài hước, sự tự tin, trí tuệ, văn hóa",
+                "Sức hút, khả năng lãnh đạo, giỏi về một lĩnh vực nào đó",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Tự tin, ăn mặc đẹp, vui tính, giàu có, khả năng lãnh đạo"
+        },
+        {
+            "question": "với điểm số 10/10, điều quan trọng là gì?",
+            "image": "",
+            "choices": [
+                "Vẻ bề ngoài",
+                "Phẩm chất nội tâm",
+                "Cả hai đều quan trọng",
+                "Chưa được đề cập"
+            ],
+            "correctAnswer": "Cả hai đều quan trọng"
+        }
+    ]
+}

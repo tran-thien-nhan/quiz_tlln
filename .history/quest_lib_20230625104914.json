@@ -1,0 +1,25 @@
+{
+    "questions": [
+      {
+        "question": "Hòn Ngọc Viễn Đông là tên gọi khác của đảo nào?",
+        "choices": [
+          "Côn Đảo",
+          "Phú Quốc",
+          "Nam Du",
+          "Cát Bà"
+        ],
+        "correctAnswer": "Phú Quốc"
+      },
+      {
+        "question": "Ai là vị vua cuối cùng của triều đại Lý?",
+        "choices": [
+          "Lý Thánh Tông",
+          "Lý Cao Tông",
+          "Lý Huệ Tông",
+          "Lý Nhân Tông"
+        ],
+        "correctAnswer": "Lý Nhân Tông"
+      }
+    ]
+  }
+  

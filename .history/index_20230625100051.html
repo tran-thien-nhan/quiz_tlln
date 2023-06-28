@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Trắc nghiệm</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <!-- Modal Đăng nhập -->
+    <div id="loginModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng nhập</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="loginForm">
+                        <div class="mb-3">
+                            <label for="loginUsername" class="form-label">Tên đăng nhập</label>
+                            <input type="text" class="form-control" id="loginUsername" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="loginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Modal Đăng ký -->
+    <div id="registerModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Đăng ký</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="registerForm">
+                        <div class="mb-3">
+                            <label for="registerUsername" class="form-label">Tên đăng nhập</label>
+                            <input type="text" class="form-control" id="registerUsername" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" id="registerPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Đăng ký</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Bài trắc nghiệm -->
+    <div id="quizContainer" style="display: none;">
+        <h1>Bài trắc nghiệm</h1>
+        <div id="question"></div>
+        <div id="choices"></div>
+        <button id="submitBtn" class="btn btn-primary">Nộp bài</button>
+        <div id="result" style="display: none;"></div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Kiểm tra đăng nhập
+        function checkLogin() {
+            return sessionStorage.getItem('loggedIn') === 'true';
+        }
+
+        // Hiển thị modal đăng nhập
+        function showLoginModal() {
+            $('#loginModal').modal('show');
+        }
+
+        // Xử lý đăng nhập
+        $('#loginForm').submit(function (e) {
+            e.preventDefault();
+            var username = $('#loginUsername').val();
+            var password = $('#loginPassword').val();
+            // Kiểm tra thông tin đăng nhập ở đây
+            // ...
+            // Giả sử thông tin đúng
+            sessionStorage.setItem('loggedIn', 'true');
+            $('#loginModal').modal('hide');
+            showQuiz();
+        });
+
+        // Hiển thị modal đăng ký
+        function showRegisterModal() {
+            $('#registerModal').modal('show');
+        }
+
+        // Xử lý đăng ký
+        $('#registerForm').submit(function (e) {
+            e.preventDefault();
+            var username = $('#registerUsername').val();
+            var password = $('#registerPassword').val();
+
+            // Kiểm tra tính hợp lệ của thông tin đăng ký
+            if (username.trim() === '' || password.trim() === '') {
+                alert('Vui lòng nhập tên đăng nhập và mật khẩu.');
+                return;
+            }
+
+            // Lưu thông tin đăng ký vào sessionStorage
+            var userInfo = {
+                username: username,
+                password: password
+            };
+            sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
+            sessionStorage.setItem('loggedIn', 'true');
+
+            $('#registerModal').modal('hide');
+            showQuiz();
+        });
+
+
+        // Hiển thị bài trắc nghiệm
+        function showQuiz() {
+            $('#quizContainer').show();
+            loadQuestion();
+        }
+
+        // Load câu hỏi từ file JSON
+        function loadQuestion() {
+            $.getJSON('quest-lib.json', function (data) {
+                var questions = data.questions;
+                var shuffledQuestions = shuffleArray(questions);
+                displayQuestion(shuffledQuestions[0]);
+            }).fail(function () {
+                alert('Không thể tải câu hỏi. Vui lòng thử lại sau.');
+            });
+        }
+
+        // Hiển thị câu hỏi và lựa chọn
+        function displayQuestion(question) {
+            $('#question').text(question.question);
+            var choices = question.choices;
+            var shuffledChoices = shuffleArray(choices);
+            $('#choices').empty();
+            for (var i = 0; i < shuffledChoices.length; i++) {
+                var choice = shuffledChoices[i];
+                var radioBtn = $('<input type="radio" name="choice" value="' + choice + '"> ' + choice + '<br>');
+                $('#choices').append(radioBtn);
+            }
+        }
+
+        // Xáo trộn mảng
+        function shuffleArray(array) {
+            var currentIndex = array.length, temporaryValue, randomIndex;
+            while (0 !== currentIndex) {
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex -= 1;
+                temporaryValue = array[currentIndex];
+                array[currentIndex] = array[randomIndex];
+                array[randomIndex] = temporaryValue;
+            }
+            return array;
+        }
+
+        // Xử lý nút Nộp bài
+        $('#submitBtn').click(function () {
+            var selectedChoice = $('input[name="choice"]:checked').val();
+
+            // Kiểm tra xem người dùng đã chọn câu trả lời hay chưa
+            if (!selectedChoice) {
+                alert('Vui lòng chọn câu trả lời.');
+                return;
+            }
+
+            // Xử lý điểm số ở đây
+            var score = calculateScore(selectedChoice);
+
+            // Ẩn phần bài trắc nghiệm và hiển thị kết quả
+            $('#quizContainer').hide();
+            $('#result').text('Điểm số: ' + score).show();
+        });
+
+        // Hàm tính điểm số
+        function calculateScore(selectedChoice) {
+            // Trong phần này, bạn cần thực hiện các phép tính và xử lý để tính điểm số dựa trên câu trả lời được chọn.
+            // Ví dụ:
+            // Nếu câu trả lời đúng là 'A', và người dùng chọn 'A', bạn có thể gán điểm là 1.
+            // Nếu câu trả lời đúng là 'A', và người dùng chọn 'B', bạn có thể gán điểm là 0.
+            // Thông qua các phép tính tương tự, bạn có thể tính toán điểm số dựa trên các câu hỏi và câu trả lời.
+
+            // Dưới đây là một ví dụ đơn giản cho việc tính điểm với câu trả lời đúng là 'A'.
+            var correctAnswer = 'A';
+            var score = 0;
+
+            if (selectedChoice === correctAnswer) {
+                score = 1;
+            }
+
+            return score;
+        }
+
+
+        // Kiểm tra đăng nhập khi tải trang
+        $(document).ready(function () {
+            if (checkLogin()) {
+                showQuiz();
+            } else {
+                showLoginModal();
+            }
+        });
+    </script>
+</body>
+
+</html>

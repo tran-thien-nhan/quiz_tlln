@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TLLN QUIZ</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        .thumbnail-container {
+            position: relative;
+            width: 100%;
+            height: 200px;
+            /* Cập nhật chiều cao ở đây */
+            overflow: hidden;
+        }
+
+        .thumbnail {
+            opacity: 0.7;
+            transition: opacity 0.3s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .thumbnail:hover {
+            opacity: 1;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: black;
+            opacity: 0.85;
+            font-size: 20px;
+            text-align: center;
+            width: fit-content;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <!-- phần menu -->
+        <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-white">
+            <div class="container-fluid">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Quiz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="triz_blog.html">Triz</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="tools.html">Tools</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="resources_blog.html">Resources</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- end phần menu -->
+
+        <!-- phần tìm kiếm sách -->
+        <input class="mt-2" style="align-items: center;" type="text" id="searchInput" placeholder="Tìm kiếm tên sách...">
+        <!-- end phần tìm kiếm sách -->
+        <div class="row mt-2">
+
+            <div class="col-md-3">
+                <a href="https://drive.google.com/file/d/1APgXrDaBDQRjiDcOsr7FC8R60NNnNzuB/view?usp=drive_link"
+                    target="_blank">
+                    <div class="thumbnail-container">
+                        <img src="https://m.media-amazon.com/images/I/713yOattgsL._AC_UF1000,1000_QL80_.jpg"
+                            class="thumbnail img-fluid" alt="Ảnh 1">
+                        <h5 class="title">VAGABOND COLLECTION</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="https://drive.google.com/file/d/1I1q4ymwa5UJaTW0Xv_fYWCG9oQv05BYS/view?usp=drive_link"
+                    target="_blank">
+                    <div class="thumbnail-container">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZfAMTAikTmMmk-FxEMFNTo183qQ0tkRN0dSrPsNBEEPdZrFYxe_b_JqfIB-iwKR_PP00&usqp=CAU"
+                            class="thumbnail img-fluid" alt="Ảnh 2">
+                        <h5 class="title">THE DAILY STOIC</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="https://drive.google.com/file/d/1I1q4ymwa5UJaTW0Xv_fYWCG9oQv05BYS/view?usp=drive_link"
+                    target="_blank">
+                    <div class="thumbnail-container">
+                        <img src="https://i.guim.co.uk/img/media/8c284e7e54c583ddba9a064cfae7dd74d01c7635/0_0_1279_768/master/1279.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=e37e61b53d35dc9ad2486e1184f2203e"
+                            class="thumbnail img-fluid" alt="Ảnh 2">
+                        <h5 class="title">THE REDPILL HANDBOOK</h5>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-3">
+                <a href="https://drive.google.com/file/d/1uUGfvrXTo-hCrbHBvYF9bmxKVs1jzBua/view?usp=drive_link"
+                    target="_blank">
+                    <div class="thumbnail-container">
+                        <img src="img/duy_huynh.PNG"
+                            class="thumbnail img-fluid" alt="Ảnh 2">
+                        <h5 class="title">DUY HUYNH</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-md-3">
+                <a href="https://drive.google.com/file/d/1r44KDek5tLfB4O83t-0TfzbnxrdDuD1U/view?usp=drive_link"
+                    target="_blank">
+                    <div class="thumbnail-container">
+                        <img src="data:image/png;base64,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"
+                            class="thumbnail img-fluid" alt="Ảnh 2">
+                        <h5 class="title">THOÁT KIẾP TRAI HÈN</h5>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br>
+    <a href="index.html" class="btn btn-danger" style="margin-left: 0.75rem;">Home</a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Lấy các phần tử cần sử dụng
+            var searchInput = document.getElementById("searchInput");
+            var thumbnailContainers = document.getElementsByClassName("thumbnail-container");
+    
+            // Xử lý sự kiện tìm kiếm khi thay đổi giá trị trong ô input
+            searchInput.addEventListener("input", function() {
+                var searchTerm = searchInput.value.toLowerCase();
+                performSearch(searchTerm);
+            });
+    
+            // Hàm thực hiện tìm kiếm và ẩn hiện các sách dựa trên kết quả tìm kiếm
+            function performSearch(searchTerm) {
+                for (var i = 0; i < thumbnailContainers.length; i++) {
+                    var titleElement = thumbnailContainers[i].querySelector(".title");
+                    var title = titleElement.textContent.toLowerCase();
+                    if (title.includes(searchTerm)) {
+                        thumbnailContainers[i].style.display = "block";
+                    } else {
+                        thumbnailContainers[i].style.display = "none";
+                    }
+                }
+            }
+        });
+    </script>
+    
+
+</body>
+
+</html>
