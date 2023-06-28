@@ -44,7 +44,7 @@
     <div class="container-fluid">
         <!-- phần menu -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
+            <div class="container">
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -69,10 +69,15 @@
         <!-- end phần menu -->
 
         <div style="display: flex;">
-            <!-- phần tìm kiếm bài viết -->
-            <input class="mt-2" style="align-items: center;" type="text" id="searchInput"
-                placeholder="Tìm kiếm tên bài viết...">
-            <!-- end phần tìm kiếm bài viết -->
+            <div class="mt-2">
+                <a href="quiz.html" class="btn btn-danger" style="margin-left: 0.75rem;">Home</a>
+                <a id="backButton" class="btn btn-secondary">Back</a>
+            </div>
+
+            <!-- phần tìm kiếm sách -->
+            <input class="mt-2" style="align-items: center; margin-left: 2rem;" type="text" id="searchInput"
+                placeholder="Tìm kiếm tên sách...">
+            <!-- end phần tìm kiếm sách -->
 
             <!-- phần lọc type -->
             <div class="dropdown" style="margin-left: 2rem; margin-top: 0.5rem;">
@@ -82,9 +87,10 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="#" data-type="thể loại">Tất cả</a></li>
-                    <li><a class="dropdown-item" href="#" data-type="vagabond">vagabond</a></li>
-                    <li><a class="dropdown-item" href="#" data-type="the first old school redpill">the first old school redpill</a></li>
-                    <li><a class="dropdown-item" href="#" data-type="trở lại làm người">trở lại làm người</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="redpill">Redpill</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="triết học">Triết học</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="sách thường">Sách thường</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="sức khỏe">sức khỏe</a></li>
                 </ul>
             </div>
 
@@ -92,7 +98,7 @@
         </div>
 
         <div class="row mt-2 left-align" id="content">
-            <!-- Đây là nơi sẽ chứa các bài viết -->
+            <!-- Đây là nơi sẽ chứa các sách -->
         </div>
     </div>
     <br>
@@ -104,7 +110,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Lấy dữ liệu từ file JSON
-            fetch('blog.json')
+            fetch('book.json')
                 .then(response => response.json())
                 .then(data => {
                     const items = data.items;
@@ -113,10 +119,10 @@
                     // Tạo các phần tử HTML dựa trên dữ liệu từ file JSON
                     items.forEach(item => {
                         const divElement = document.createElement('div');
-                        divElement.className = 'col-lg-4 col-md-6 mt-2';
+                        divElement.className = 'col-md-3 mt-2';
 
                         const aElement = document.createElement('a');
-                        aElement.href = item.link;
+                        aElement.href = item.google_drive_link;
                         aElement.target = '_blank';
 
                         const thumbnailContainerElement = document.createElement('div');

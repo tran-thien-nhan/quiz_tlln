@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>TLLN QUIZ</title>
+    <title>Triz Blog</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <style>
         .thumbnail-container {
@@ -69,10 +69,10 @@
         <!-- end phần menu -->
 
         <div style="display: flex;">
-            <!-- phần tìm kiếm bài viết -->
+            <!-- phần tìm kiếm sách -->
             <input class="mt-2" style="align-items: center;" type="text" id="searchInput"
-                placeholder="Tìm kiếm tên bài viết...">
-            <!-- end phần tìm kiếm bài viết -->
+                placeholder="Tìm kiếm tên sách...">
+            <!-- end phần tìm kiếm sách -->
 
             <!-- phần lọc type -->
             <div class="dropdown" style="margin-left: 2rem; margin-top: 0.5rem;">
@@ -82,17 +82,16 @@
                 </button>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <li><a class="dropdown-item" href="#" data-type="thể loại">Tất cả</a></li>
-                    <li><a class="dropdown-item" href="#" data-type="vagabond">vagabond</a></li>
-                    <li><a class="dropdown-item" href="#" data-type="the first old school redpill">the first old school redpill</a></li>
-                    <li><a class="dropdown-item" href="#" data-type="trở lại làm người">trở lại làm người</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="bài viết">bài viết</a></li>
+                    <li><a class="dropdown-item" href="#" data-type="sách">sách</a></li>
                 </ul>
             </div>
 
             <!-- end phần lọc type -->
         </div>
 
-        <div class="row mt-2 left-align" id="content">
-            <!-- Đây là nơi sẽ chứa các bài viết -->
+        <div class="row mt-2" id="content">
+            <!-- Đây là nơi sẽ chứa các sách -->
         </div>
     </div>
     <br>
@@ -104,7 +103,7 @@
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             // Lấy dữ liệu từ file JSON
-            fetch('blog.json')
+            fetch('triz_blog.json')
                 .then(response => response.json())
                 .then(data => {
                     const items = data.items;
@@ -116,7 +115,7 @@
                         divElement.className = 'col-lg-4 col-md-6 mt-2';
 
                         const aElement = document.createElement('a');
-                        aElement.href = item.link;
+                        aElement.href = item.google_drive_link;
                         aElement.target = '_blank';
 
                         const thumbnailContainerElement = document.createElement('div');
@@ -143,7 +142,6 @@
                         thumbnailContainerElement.appendChild(typeElement);
                         contentElement.appendChild(divElement);
                     });
-                    
                 })
                 .catch(error => {
                     console.error('Error:', error);

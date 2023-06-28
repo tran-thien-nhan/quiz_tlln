@@ -43,27 +43,33 @@
 <body>
   <div class="container-fluid">
     <!-- phần menu -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark text-white">
-      <div class="container-fluid">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link active" href="quiz.html">Quiz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="triz_blog.html">Triz</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="tools.html">Tools</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white" href="resources_blog.html">Resources</a>
-          </li>
-        </ul>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="quiz.html">Quiz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="triz_blog.html">Triz</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="tools.html">Tools</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="resources_blog.html">Resources</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
+    
     <!-- end phần menu -->
     <div class="row mt-2">
-      <div class="col-md-3">
+      <div class="col-lg-4 col-md-6">
         <a href="daily_stoic_quiz.html">
           <div class="thumbnail-container">
             <img src="img/stoic_thumbnail.webp" class="thumbnail img-fluid" alt="Ảnh 1">
@@ -71,8 +77,8 @@
           </div>
         </a>
       </div>
-
-      <div class="col-md-3">
+    
+      <div class="col-lg-4 col-md-6">
         <a href="men_advantage_quiz.html">
           <div class="thumbnail-container">
             <img src="img/men_advantage.jfif" class="thumbnail img-fluid" alt="Ảnh 2">
@@ -80,8 +86,8 @@
           </div>
         </a>
       </div>
-
-      <div class="col-md-3">
+    
+      <div class="col-lg-4 col-md-6">
         <a href="">
           <div class="thumbnail-container">
             <img src="img/trong_mat_bat_hinh_dong_thumbnail.PNG" class="thumbnail img-fluid" alt="Ảnh 3">
@@ -90,6 +96,7 @@
         </a>
       </div>
     </div>
+    
   </div>
     <a id="backButton" class="btn btn-secondary" style="margin-left: 0.75rem; margin-top:1rem;">Back</a>
     <script src="back.js"></script>
