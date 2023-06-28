@@ -19,6 +19,16 @@
             "link": "blog.html",
             "image_link": "img/the_matrix_all.webp",
             "title": "BLOG - CÁC BÀI VIẾT HAY"
+        },
+        {
+            "link": "lap_trinh.html",
+            "image_link": "https://tuhoclaptrinh.edu.vn/upload/post/2022/07/04/hoc-lap-trinh-can-luu-y-nhung-gi-20220704102621-884273.jpg",
+            "title": "LẬP TRÌNH"
+        },
+        {
+            "link": "ielts.html",
+            "image_link": "https://www.ieltsasia.org/vn/sites/www.ieltsasia.org.vn/files/ielts-registration-39516.jpg",
+            "title": "IELTS, TIẾNG ANH"
         }
     ]
 }

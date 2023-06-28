@@ -1,0 +1,28 @@
+{
+    "items": [
+        {
+            "link": "https://morioh.com/p/5c4bb604be36?f=5eba5842444df05d1248ec97&fbclid=IwAR0wPWS_6mET-bnYs--fhi1jNi28OkT3IlrniLYucJk47zXgq3FnmUd2NP4",
+            "type": "project",
+            "image_link": "https://cdn-developer-wp.arc.dev/wp-content/uploads/2022/06/coding-programming-project-ideas-1128x635.jpg",
+            "title": "how to create a food website design using HTML and CSS"
+        },
+        {
+            "link": "https://www.facebook.com/Databases4U/posts/pfbid02428VAcxg64NJtvSL6qWogNNioho5rxKkK4gwqua4AgkK2i1Tm2eQjh9SiZ594JWtl",
+            "type": "sql",
+            "image_link": "https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/MSFT-1125-SQL_Server_2022_web_blade_image_RWWaqg:VP1-539x440?resMode=sharp2&op_usm=1.5,0.65,15,0&wid=1920&hei=600&qlt=100&fmt=png-alpha&fit=constrain",
+            "title": "Top 26 SQL Interview Questions"
+        },
+        {
+            "link": "https://morioh.com/p/6d21daca54ff?f=5cb7d89d660c8335951ca454&fbclid=IwAR3a6eqDpGClAKzofgGvR0-hELuWETSg9AAWS92-LnrhW_BI__M-yYwbdns",
+            "type": "git",
+            "image_link": "https://git-scm.com/images/logos/downloads/Git-Icon-Black.png",
+            "title": "git and github cho người mới bắt đầu"
+        },
+        {
+            "link": "https://morioh.com/p/ce8a511ed295?f=5cb7d89d660c8335951ca454&fbclid=IwAR1ZxLuqCJgfXjA6e_NrnJ4Xh1MVfJH4-5sI3c9OeJtBQNaS3wSeyFCku88",
+            "type": "html,css",
+            "image_link": "https://www.nicepng.com/png/detail/985-9857805_html5-css3-logo-png-html-and-css-logo.png",
+            "title": "tạo ra 1 hệ thống thiết kế web với css"
+        }
+    ]
+}
