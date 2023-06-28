@@ -44,8 +44,9 @@
   <div class="container-fluid">
     <!-- phần menu -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-      <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
@@ -66,41 +67,101 @@
         </div>
       </div>
     </nav>
-    
     <!-- end phần menu -->
-    <div class="row mt-2">
-      <div class="col-lg-4 col-md-6">
-        <a href="daily_stoic_quiz.html">
-          <div class="thumbnail-container">
-            <img src="img/stoic_thumbnail.webp" class="thumbnail img-fluid" alt="Ảnh 1">
-            <h5 class="title">The Daily Stoic</h5>
-          </div>
-        </a>
-      </div>
-    
-      <div class="col-lg-4 col-md-6">
-        <a href="men_advantage_quiz.html">
-          <div class="thumbnail-container">
-            <img src="img/men_advantage.jfif" class="thumbnail img-fluid" alt="Ảnh 2">
-            <h5 class="title">Lợi Thế Đàn Ông</h5>
-          </div>
-        </a>
-      </div>
-    
-      <div class="col-lg-4 col-md-6">
-        <a href="">
-          <div class="thumbnail-container">
-            <img src="img/trong_mat_bat_hinh_dong_thumbnail.PNG" class="thumbnail img-fluid" alt="Ảnh 3">
-            <h5 class="title">Trông Mặt Bắt Hình Dong</h5>
-          </div>
-        </a>
-      </div>
+
+    <div class="d-flex mt-2">
+
+      <!-- phần tìm kiếm quiz -->
+      <input class="mt-2" style="align-items: center;" type="text" id="searchInput" placeholder="Tìm kiếm...">
+      <!-- end phần tìm kiếm quiz -->
+
     </div>
-    
+
+
+    <div class="row mt-2 left-align" id="content">
+      <!-- Đây là nơi sẽ chứa các sách -->
+    </div>
   </div>
-    <a id="backButton" class="btn btn-secondary" style="margin-left: 0.75rem; margin-top:1rem;">Back</a>
-    <script src="back.js"></script>
+  <br>
+  <a href="quiz.html" class="btn btn-danger" style="margin-left: 0.75rem;">Home</a>
+  <a id="backButton" class="btn btn-secondary">Back</a>
+  <script src="back.js"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Lấy dữ liệu từ file JSON
+      fetch('quiz.json')
+        .then(response => response.json())
+        .then(data => {
+          const items = data.items;
+          const contentElement = document.getElementById('content');
+
+          // Tạo các phần tử HTML dựa trên dữ liệu từ file JSON
+          items.forEach(item => {
+            const divElement = document.createElement('div');
+            divElement.className = 'col-lg-4 col-md-6 mt-2';
+
+            const aElement = document.createElement('a');
+            aElement.href = item.link;
+            // aElement.target = '_blank';
+
+            const thumbnailContainerElement = document.createElement('div');
+            thumbnailContainerElement.className = 'thumbnail-container';
+
+            const imgElement = document.createElement('img');
+            imgElement.src = item.image_link;
+            imgElement.className = 'thumbnail img-fluid';
+            imgElement.alt = 'Image';
+
+            const h5Element = document.createElement('h5');
+            h5Element.className = 'title';
+            h5Element.textContent = item.title;
+
+            const typeElement = document.createElement('h5');
+            typeElement.className = 'type';
+            typeElement.textContent = item.type;
+
+            // Gắn các phần tử vào DOM
+            thumbnailContainerElement.appendChild(imgElement);
+            thumbnailContainerElement.appendChild(h5Element);
+            aElement.appendChild(thumbnailContainerElement);
+            divElement.appendChild(aElement);
+            thumbnailContainerElement.appendChild(typeElement);
+            contentElement.appendChild(divElement);
+          });
+
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+
+      // Lấy các phần tử cần sử dụng
+      var searchInput = document.getElementById("searchInput");
+      var thumbnailContainers = document.getElementsByClassName("thumbnail-container");
+
+      // Xử lý sự kiện tìm kiếm khi thay đổi giá trị trong ô input
+      searchInput.addEventListener("input", function () {
+        var searchTerm = searchInput.value.toLowerCase();
+        performSearch(searchTerm);
+      });
+
+      // Hàm thực hiện tìm kiếm và ẩn hiện các sách dựa trên kết quả tìm kiếm
+      function performSearch(searchTerm) {
+        for (var i = 0; i < thumbnailContainers.length; i++) {
+          var titleElement = thumbnailContainers[i].querySelector(".title");
+          var title = titleElement.textContent.toLowerCase();
+          if (title.includes(searchTerm)) {
+            thumbnailContainers[i].style.display = "block";
+          } else {
+            thumbnailContainers[i].style.display = "none";
+          }
+        }
+      }
+    });
+  </script>
+
+
 </body>
 
 </html>

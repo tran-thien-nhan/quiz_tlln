@@ -1,0 +1,14 @@
+{
+    "items": [
+        {
+            "link": "daily_stoic_quiz.html",
+            "image_link": "img/stoic_thumbnail.webp",
+            "title": "THE DAILY STOIC QUIZ"
+        },
+        {
+            "link": "men_advantage_quiz.html",
+            "image_link": "img/men_advantage.jfif",
+            "title": "MEN ADVANTAGE QUIZ"
+        }
+    ]
+}
